@@ -1,0 +1,9 @@
+@import "../../../style.scss";
+::ng-deep {
+  .toggle-background-padding .p-selectbutton .p-button.p-highlight,
+  .toggle-background-padding .p-selectbutton .p-button,
+  .toggle-background-padding .p-selectbutton .p-button:hover,
+  .toggle-background-padding .p-selectbutton .p-button:focus {
+    padding: 0.2rem 0.2rem;
+  }
+}

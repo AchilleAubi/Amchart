@@ -1,0 +1,11 @@
+<p-tag [styleClass]="getStyleClass(type)" [rounded]="type.includes('-rounded')" class="hover: cursor-pointer"
+    *ngIf="(type.endsWith('-removed')) && showTag">
+    <span [ngClass]="{'mr-2': icon !== ''}">{{ value }}</span>
+    <i class="{{ icon }}" (click)="handleCloseClick()"></i>
+</p-tag>
+
+<p-tag [styleClass]="getStyleClass(type)" class="hover: cursor-pointer" [rounded]="type.includes('-rounded')"
+    *ngIf="type && showTag && !(type.endsWith('-removed'))" (click)="toggleIcon()">
+    <span [ngClass]="{'mr-2': icon !== ''}">{{ value }}</span>
+    <i class="{{ icon }}" *ngIf="showIcon && (type.endsWith('-icon'))"></i>
+</p-tag>

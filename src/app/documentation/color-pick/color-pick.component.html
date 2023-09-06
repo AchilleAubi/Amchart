@@ -1,0 +1,28 @@
+<div class="card">
+  <p-tabView>
+    <p-tabPanel header="Demo">
+      <div class="grid grid-cols-2">
+        <div class="col-span-1 flex items-center">
+          <label for="searchInput" class="mr-4"><strong>Select color : </strong></label>
+          <cca-color-select [color]="color"></cca-color-select>
+        </div>
+        <div class="col-span-1 flex items-center">
+          <label for="searchInput" class="mr-4"><strong>Mode inline : </strong></label>
+          <cca-color-select [color]="color" [inline]="true"></cca-color-select>
+        </div>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Typescript">
+      <div>
+        color: string = '';
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="HTML">
+      <div>
+        <code>&lt;cca-color-select [color]="color"&gt;&lt;/cca-color-select&gt;</code>
+        <br>
+        <code>&lt;cca-color-select [color]="color" [inline]="true"&gt;&lt;/cca-color-select&gt;</code>
+      </div>
+    </p-tabPanel>
+  </p-tabView>
+</div>

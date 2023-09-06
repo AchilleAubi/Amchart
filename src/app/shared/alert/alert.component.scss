@@ -1,0 +1,19 @@
+::ng-deep {
+  p-confirmdialog {
+    .p-dialog-header {
+      display: none;
+    }
+    .p-dialog .p-dialog-content {
+      padding: 0rem !important;
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+    }
+    .p-dialog .p-dialog-footer {
+      padding: 0rem;
+      text-align: center;
+    }
+    .p-dialog.p-confirm-dialog .p-confirm-dialog-message {
+      margin-left: 0rem;
+    }
+  }
+}

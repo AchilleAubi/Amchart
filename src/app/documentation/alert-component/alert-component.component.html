@@ -1,0 +1,70 @@
+<div class="flex justify-around flex-wrap">
+  <cca-buttons
+    [btnConfig]="{
+            type: 'Error',
+            label: 'Error alert',
+            styledClass: 'bg-error m-1 border-transparent hover:bg-red-400',
+          }"
+    [buttonType]="'full'"
+    (click)="openPopup('Error')"
+  ></cca-buttons>
+  <cca-buttons
+    [btnConfig]="{
+            type: 'Info',
+            label: 'Info alert',
+            styledClass: 'bg-info m-1 border-transparent hover:bg-cyan-400',
+          }"
+    [buttonType]="'full'"
+    (click)="openPopup('Info')"
+  ></cca-buttons>
+  <cca-buttons
+    [btnConfig]="{
+            type: 'Warn',
+            label: 'Warn alert',
+            styledClass: 'bg-warn m-1 border-transparent hover:bg-yellow-600',
+          }"
+    [buttonType]="'full'"
+    (click)="openPopup('Warn')"
+  ></cca-buttons>
+  <cca-buttons
+    [btnConfig]="{
+            type: 'Success',
+            label: 'Success alert',
+            styledClass:
+              'bg-success m-1 border-transparent hover:bg-green-700',
+          }"
+    [buttonType]="'full'"
+    (click)="openPopup('Success')"
+  ></cca-buttons>
+</div>
+<br />
+<div class="flex justify-around flex-wrap">
+  <cca-buttons
+    [btnConfig]="{
+          type: 'Error',
+          label: 'Delete popup',
+          styledClass: 'rounded m-1 border-1 border-error px-3 py-2 font-medium text-error hover:border-error-600 hover:bg-error hover:bg-opacity-10 hover:text-error-600',
+        }"
+    [buttonType]="'bordered-button'"
+    (click)="openPopup('Delete popup')"
+  ></cca-buttons>
+  <cca-buttons
+    [btnConfig]="{
+        type: 'Primary',
+        label: 'confirm popup',
+        styledClass:
+        'rounded border-1 m-1 border-primary px-3 py-2 font-medium text-primary hover:border-primary-600 hover:bg-primary-100 hover:bg-opacity-10 hover:text-primary-600',
+      }"
+    [buttonType]="'bordered-button'"
+    (click)="openPopup('confirm popup')"
+  ></cca-buttons>
+</div>
+<br />
+<cca-alert
+  *ngIf="showModal"
+  [alertContent]="alertContent"
+  [btnTitle]="btnTitle"
+  [confirmBtnClass]="confirmBtnClass"
+  [showCancelBtn]="showCancelBtn"
+  (closed)="closePopup()"
+></cca-alert>

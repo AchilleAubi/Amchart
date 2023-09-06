@@ -1,0 +1,73 @@
+<form *ngIf="dataParams.type === 'input-search'" class="{{dataParams.width}}">
+  <div class="relative">
+    <input type="search" pInputText required [(ngModel)]="dataParams.value" placeholder="{{dataParams.placeholder}}"
+      class="w-full bg-gray-50 p-3 pl-10" />
+    <button type="submit"
+      class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"><i
+        class="pi pi-search mr-2"></i>{{dataParams.legend}}</button>
+  </div>
+</form>
+
+<p-inputSwitch *ngIf="dataParams.type === 'input-switch'" [(ngModel)]="dataParams.checked"></p-inputSwitch>
+
+<p-inputMask [size]=dataParams.size mask="{{dataParams.mask}}" *ngIf="dataParams.type === 'input-mask'"
+  [(ngModel)]="dataParams.value" placeholder="{{dataParams.placeholder}}"
+  slotChar="{{dataParams.slotChar}}"></p-inputMask>
+
+<input type="text" [size]=dataParams.size *ngIf="dataParams.type === 'input-basic'" pInputText
+  [(ngModel)]="dataParams.value" placeholder="{{dataParams.placeholder}}" disabled="{{dataParams.disabled}}"
+  class="{{dataParams.volume}}" />
+
+<span *ngIf="dataParams.type === 'input-with-icon'" class="p-input-icon-{{dataParams.posIcon}}">
+  <i class="{{dataParams.icon}}"></i>
+  <input type="text" pInputText placeholder="{{dataParams.placeholder}}" disabled="{{dataParams.disabled}}"
+    [size]=dataParams.size [(ngModel)]="dataParams.value" />
+</span>
+
+<span *ngIf="dataParams.type === 'input-float-label'" class="p-float-label">
+  <input pInputText id="input" [size]=dataParams.size disabled="{{dataParams.disabled}}"
+    [(ngModel)]="dataParams.value" />
+  <label htmlFor="input">{{dataParams.legend}}</label>
+</span>
+
+<textarea *ngIf="dataParams.type === 'input-textarea'" rows="{{dataParams.rows}}" class="{{dataParams.width}}"
+  pInputTextarea placeholder="{{dataParams.placeholder}}" [autoResize]="dataParams.autoResize"
+  [(ngModel)]="dataParams.value" disabled="{{dataParams.disabled}}"></textarea>
+
+<span *ngIf="dataParams.type === 'input-textarea-float-label'" class="p-float-label">
+  <textarea id="float-input" rows="{{dataParams.rows}}" placeholder="{{dataParams.placeholder}}"
+    [autoResize]="dataParams.autoResize" class="{{dataParams.width}}" [(ngModel)]="dataParams.value"
+    pInputTextarea></textarea>
+  <label for="float-input">{{dataParams.legend}}</label>
+</span>
+
+<div class="flex flex-col" *ngIf="dataParams.type === 'input-required-text'">
+  <input type="text" name="name" id="name" [size]="dataParams.size" required pInputText [(ngModel)]="dataParams.value"
+    placeholder="{{ dataParams.placeholder }}" class="peer {{ dataParams.width }}"
+    [ngClass]="{'border-red-500': !dataParams.valid}" (ngModelChange)="checkValidity()" />
+  <p class="invisible peer-invalid:visible text-red-700 font-light">
+    <strong>{{ dataParams.legend }}</strong>
+  </p>
+</div>
+
+<div class="flex flex-col" *ngIf="dataParams.type === 'input-required-email'">
+  <input type="email" name="email" id="email" [size]="dataParams.size" required pInputText
+    [(ngModel)]="dataParams.value" placeholder="{{ dataParams.placeholder }}" class="peer {{ dataParams.width }}"
+    [ngClass]="{'border-red-500': !dataParams.valid}" (ngModelChange)="checkEmailValidity()" />
+  <p class="invisible peer-invalid:visible text-red-700 font-light">
+    <strong>{{ dataParams.legend }}</strong>
+  </p>
+</div>
+
+
+<div class="flex flex-col" *ngIf="dataParams.type === 'input-required-textarea'">
+  <textarea rows="{{ dataParams.rows }}" class="peer {{ dataParams.width }}" required pInputTextarea
+    [(ngModel)]="dataParams.value" [ngClass]="{'border-red-500': !dataParams.valid}"
+    (ngModelChange)="checkValidity()"></textarea>
+  <p class="invisible peer-invalid:visible text-red-700 font-light">
+    <strong>{{ dataParams.legend }}</strong>
+  </p>
+</div>
+
+<input *ngIf="dataParams.type === 'invalid'" [size]=dataParams.size pInputText class="ng-invalid ng-dirty"
+  [(ngModel)]="dataParams.value" />

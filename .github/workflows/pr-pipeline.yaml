@@ -1,0 +1,80 @@
+name: pr-checks
+on:
+  pull_request:
+    branches:
+      - main
+      - master
+      - staging
+      - stable
+jobs:
+  lint-commits:
+    name: Lint commits
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Check commit lint
+        uses: wagoid/commitlint-github-action@v5
+
+  scan-vulnerabilities:
+    name: Scan vulnerabilities
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run Trivy vulnerability scanner in repo mode
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          ignore-unfixed: true
+          format: 'json'
+          output: 'vulnerabilities-report.json'
+          severity: 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL'
+          exit-code: '0'
+      - name: Format vulnerabilities
+        if: always()
+        run: |
+          sudo apt-get install jq
+
+          direct_dependencies="$(jq '[(.devDependencies|keys),(.dependencies|keys)]|flatten' package.json)"
+          table_header="| Severity | PkgName | InstalledVersion | FixedVersion | \n |---|---|---|---|"
+          output_direct=""
+          output_indirect=""
+
+          while read -r entry; do
+
+            Severity="$(echo "$entry" | jq -r '.Severity')"
+            PkgName="$(echo "$entry" | jq -r '.PkgName')"
+            InstalledVersion="$(echo "$entry" | jq -r '.InstalledVersion')"
+            FixedVersion="$(echo "$entry" | jq -r '.FixedVersion')"
+
+            if [ "$( echo "$direct_dependencies" | grep -e "\"$PkgName\"" || false)" ]; then
+              output_direct="$output_direct \n | **$Severity** | $PkgName | \`$InstalledVersion\` | \`$FixedVersion\` |"
+            else
+              output_indirect="$output_indirect \n | **$Severity** | $PkgName | \`$InstalledVersion\` | \`$FixedVersion\` |"
+            fi
+
+          done< <(jq '.Results[].Vulnerabilities[]' -c vulnerabilities-report.json)
+
+          if [[ "$output_direct" || "$output_indirect" ]]; then
+            echo "# :warning: These following vulnerabilities were found">pr-feedback.md
+            if [ "$output_direct" ]; then
+              echo -e "## List of **_direct_** dependencies with vulnerabilities \n $table_header $output_direct">>pr-feedback.md
+            fi
+            if [ "$output_indirect" ]; then
+              echo -e "## List of **_indirect_** dependencies with vulnerabilities \n $table_header $output_indirect">>pr-feedback.md
+            fi
+          else
+            echo "# :white_check_mark: Congratulations! No vulnerabilities were found">pr-feedback.md
+          fi
+
+      - name: Comment vulnerabilities on PR
+        if: always()
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: These following vulnerabilities were found
+          recreate: true
+          path: ./pr-feedback.md
+

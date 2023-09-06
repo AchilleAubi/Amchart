@@ -1,0 +1,636 @@
+<label for=""><strong>Html native : </strong></label>
+<div class="block flex justify-end">
+    <div class="block mb-2">
+        <span class="mx-1 text-color">Items per page: </span>
+        <p-dropdown [options]="options" optionLabel="label" optionValue="value" [(ngModel)]="rows2"
+            (ngModelChange)="first2 = 0"></p-dropdown>
+    </div>
+</div>
+<div class="relative overflow-x-auto">
+    <table class="text-sm text-left text-gray-500 border">
+        <thead class="text-xs text-gray-700 uppercase">
+            <tr class="border">
+                <th class="px-2 w-px h-2 py-2">
+                    <input type="checkbox">
+                </th>
+                <th class="px-3 w-px py-3"></th>
+                <th scope="col" class="px-6 w-96 py-3">
+                    <div class="flex items-center">
+                        <div class="mr-2">
+                            Date
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <i class="pi pi-chevron-up text-xxs hover:cursor-pointer"></i>
+                            <i class="pi pi-chevron-down text-xxs hover:cursor-pointer"></i>
+                        </div>
+                    </div>
+                </th>
+                <th scope="col" class="px-6 w-96 py-3">
+                    <div class="flex items-center">
+                        <div class="mr-2">
+                            Company name
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <i class="pi pi-chevron-up text-xxs hover:cursor-pointer"></i>
+                            <i class="pi pi-chevron-down text-xxs hover:cursor-pointer"></i>
+                        </div>
+                    </div>
+                </th>
+                <th scope="col" class="px-6 w-96 py-3">
+                    <div class="flex items-center">
+                        <div class="mr-2">
+                            Project name
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <i class="pi pi-chevron-up text-xxs hover:cursor-pointer"></i>
+                            <i class="pi pi-chevron-down text-xxs hover:cursor-pointer"></i>
+                        </div>
+                    </div>
+                </th>
+                <th scope="col" class="px-6 w-52 py-3">
+                    <div class="flex items-center">
+                        <div class="mr-2">
+                            Type
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <i class="pi pi-chevron-up text-xxs hover:cursor-pointer"></i>
+                            <i class="pi pi-chevron-down text-xxs hover:cursor-pointer"></i>
+                        </div>
+                    </div>
+                </th>
+                <th scope="col" class="px-6 w-52 py-3">
+                    <div class="flex items-center">
+                        <div class="mr-2">
+                            Author
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <i class="pi pi-chevron-up text-xxs hover:cursor-pointer"></i>
+                            <i class="pi pi-chevron-down text-xxs hover:cursor-pointer"></i>
+                        </div>
+                    </div>
+                </th>
+                <th _ngcontent-c47="" class="thead-color countD px-2 py-3 w-px flex justify-center" scope="col">
+                    <span class="material-symbols-outlined">
+                        contract
+                    </span>
+                    <span class="material-symbols-outlined text-blue-500">
+                        info
+                    </span>
+                </th>
+                <th class="thead-color assignD px-2 w-2 py-3" scope="col">
+                    <span class="material-symbols-outlined">
+                        nest_wake_on_approach
+                    </span>
+                </th>
+                <th scope="col" class="px-6 py-3 w-40">
+                    Status
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Disc.
+                </th>
+            </tr>
+            <tr class="bg-gray-100">
+                <th class="px-3 py-3"></th>
+                <th></th>
+                <th scope="col" class="px-6 py-3">
+                    <div class="relative">
+                        <input class="w-full h-10 pr-2 pl-2 rounded-lg border" type="date">
+                    </div>
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    <div class="relative">
+                        <input class="w-28 h-10 pl-4 rounded-lg border" type="text" placeholder="Search..">
+                        <div class="absolute inset-y-0 right-2 flex items-center">
+                            <span class="material-symbols-outlined hover:cursor-pointer">
+                                search
+                            </span>
+                        </div>
+                    </div>
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    <div class="relative">
+                        <input class="w-28 h-10 pl-4 rounded-lg border" type="text" placeholder="Search..">
+                        <div class="absolute inset-y-0 right-2 flex items-center">
+                            <span class="material-symbols-outlined hover:cursor-pointer">
+                                search
+                            </span>
+                        </div>
+                    </div>
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    <select class="border rounded-lg focus:ring-dark focus:border-dark block w-full p-2.5">
+                        <option selected>filter</option>
+                        <option>United States</option>
+                        <option>Canada</option>
+                        <option>France</option>
+                        <option>Germany</option>
+                    </select>
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    <select class="border rounded-lg focus:ring-dark focus:border-dark block w-full p-2.5">
+                        <option selected>filter</option>
+                        <option>United States</option>
+                        <option>Canada</option>
+                        <option>France</option>
+                        <option>Germany</option>
+                    </select>
+                </th>
+                <th _ngcontent-c47="" class="thead-color countD px-6 py-3" scope="col">
+
+                </th>
+                <th _ngcontent-c47="" class="thead-color assignD px-6 py-3" scope="col">
+
+                </th>
+                <th scope="col" class="px-6 py-3">
+
+                </th>
+                <th scope="col" class="px-6 py-3">
+
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b hover:bg-red-50">
+                <th class="px-2 py-2">
+                    <input type="checkbox">
+                </th>
+                <td class="px-3 py-3">1</td>
+                <td scope="row" class="px-6 py-4">
+                    01/01/01
+                </td>
+                <th class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Undefined
+                </th>
+                <th class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    charte
+                </th>
+                <td class="px-6 py-4">
+                    <button type="button"
+                        class="text-white bg-blue-300 font-medium rounded-full text-sm px-3 py-1.5 text-center mr-2 mb-2">Acquisition</button>
+                </td>
+                <td class="px-6 py-4">
+                    Mélaniedsdsds Journot
+                </td>
+                <td class="px-2 py-3">1</td>
+                <td class="px-2 py-3">2</td>
+                <td class="px-6 py-3">
+                    <button type="button"
+                        class="text-white bg-blue-300 font-medium rounded-full text-sm px-3 py-1.5 text-center mr-2 mb-2">Draft</button>
+                </td>
+                <th class="flex items-center mt-5 justify-center">
+                    <i class="pi pi-ellipsis-v hover:cursor-pointer"></i>
+                </th>
+            </tr>
+            <tr class="bg-gray-100 hover:bg-red-50">
+                <th class="px-2 py-2">
+                    <input type="checkbox">
+                </th>
+                <td class="px-3 py-3">2</td>
+                <td scope="row" class="px-6 py-4">
+                    01/01/01
+                </td>
+                <th class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Undefined
+                </th>
+                <th class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    charte
+                </th>
+                <td class="px-6 py-4">
+                    <button type="button"
+                        class="text-white bg-indigo-400 font-medium rounded-full text-sm px-3 py-1.5 text-center mr-2 mb-2">Cession</button>
+                </td>
+                <td class="px-6 py-4">
+                    Mélanie Journot
+                </td>
+                <td class="px-2 py-3">2</td>
+                <td class="px-2 py-3">1</td>
+                <td class="px-6 py-3">
+                    <button type="button"
+                        class="text-white bg-blue-600 font-medium rounded-full text-sm px-3 py-1.5 text-center mr-2 mb-2">Active</button>
+                </td>
+                <th class="flex items-center mt-5 justify-center">
+                    <i class="pi pi-ellipsis-v hover:cursor-pointer"></i>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="flex align-items-center justify-content-end">
+    <p-paginator (onPageChange)="onPageChange2($event)" [first]="first2" [totalRecords]="120" [rows]="rows2"
+        [showFirstLastIcon]="false"></p-paginator>
+</div>
+
+<br>
+<p-divider></p-divider>
+<br>
+
+<label for=""><strong>PrimeNg : </strong></label>
+<div class="block flex justify-end">
+    <div class="block mb-2">
+        <span class="mx-1 text-color">Items per page: </span>
+        <p-dropdown [options]="options" optionLabel="label" optionValue="value"
+            (ngModelChange)="first2 = 0"></p-dropdown>
+    </div>
+</div>
+<div class="card">
+    <p-table #dt2 [value]="customers" dataKey="id" [rows]="10" [showCurrentPageReport]="true"
+        [rowsPerPageOptions]="[10, 25, 50]" [loading]="loading" [paginator]="true"
+        [globalFilterFields]="['name', 'country.name', 'representative.name', 'status']"
+        [tableStyle]="{ 'min-width': '75rem' }">
+        <!-- <ng-template pTemplate="caption">
+            <div class="flex">
+                <span class="p-input-icon-left ml-auto">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" placeholder="Search keyword" />
+                </span>
+            </div>
+        </ng-template> -->
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width:22%">
+                    <div class="flex items-center">
+                        <div class="mr-2">
+                            Name
+                        </div>
+                        <div class="flex flex-col items-center mt-1">
+                            <i class="pi pi-chevron-up text-xxs hover:cursor-pointer"></i>
+                            <i class="pi pi-chevron-down text-xxs hover:cursor-pointer"></i>
+                        </div>
+                    </div>
+                </th>
+                <th style="width:22%">
+                    <div class="flex items-center">
+                        <div class="mr-2">
+                            Country
+                        </div>
+                        <div class="flex flex-col items-center mt-1">
+                            <i class="pi pi-chevron-up text-xxs hover:cursor-pointer"></i>
+                            <i class="pi pi-chevron-down text-xxs hover:cursor-pointer"></i>
+                        </div>
+                    </div>
+                </th>
+                <th style="width:22%">
+                    <div class="flex items-center">
+                        <div class="mr-2">
+                            Agent
+                        </div>
+                        <div class="flex flex-col items-center mt-1">
+                            <i class="pi pi-chevron-up text-xxs hover:cursor-pointer"></i>
+                            <i class="pi pi-chevron-down text-xxs hover:cursor-pointer"></i>
+                        </div>
+                    </div>
+                </th>
+                <th style="width:22%">Status</th>
+                <th style="width:12%">Verified</th>
+            </tr>
+            <tr>
+                <th>
+                    <div class="relative">
+                        <input class="w-full h-10 pl-4 rounded-lg border" type="text" placeholder="Search..">
+                        <div class="absolute inset-y-0 right-2 flex items-center">
+                            <span class="material-symbols-outlined hover:cursor-pointer">
+                                search
+                            </span>
+                        </div>
+                    </div>
+                </th>
+                <th>
+                    <div class="relative">
+                        <input class="w-full h-10 pl-4 rounded-lg border" type="text" placeholder="Search..">
+                        <div class="absolute inset-y-0 right-2 flex items-center">
+                            <span class="material-symbols-outlined hover:cursor-pointer">
+                                search
+                            </span>
+                        </div>
+                    </div>
+                </th>
+                <th>
+                    <p-columnFilter field="representative" matchMode="in" [showMenu]="false">
+                        <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                            <p-multiSelect [ngModel]="value" placeholder="Any" optionLabel="name">
+                                <ng-template let-option pTemplate="item">
+                                    <div class="inline-block vertical-align-middle">
+                                        <img [alt]="option.label"
+                                            src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ option.image }}"
+                                            width="24" class="vertical-align-middle" />
+                                        <span class="ml-1 mt-1">{{ option.name }}</span>
+                                    </div>
+                                </ng-template>
+                            </p-multiSelect>
+                        </ng-template>
+                    </p-columnFilter>
+                </th>
+                <th>
+                    <p-columnFilter field="status" matchMode="equals" [showMenu]="false">
+                        <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                            <p-dropdown [ngModel]="value" placeholder="Any">
+                                <ng-template let-option pTemplate="item">
+                                    <p-tag [value]="option.value"></p-tag>
+                                </ng-template>
+                            </p-dropdown>
+                        </ng-template>
+                    </p-columnFilter>
+                </th>
+                <th>
+                    <p-columnFilter type="boolean" field="verified"></p-columnFilter>
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-customer>
+            <tr>
+                <td>
+                    {{ customer.name }}
+                </td>
+                <td>
+                    <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png"
+                        [class]="'flag flag-' + customer.country.code" style="width: 20px" />
+                    <span class="ml-1 vertical-align-middle">{{ customer.country.name }}</span>
+                </td>
+                <td>
+                    <img [alt]="customer.representative.name"
+                        src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ customer.representative.image }}"
+                        width="32" style="vertical-align: middle" />
+                    <span class="ml-1 vertical-align-middle">{{ customer.representative.name }}</span>
+                </td>
+                <td>
+                    <p-tag [value]="customer.status"></p-tag>
+                </td>
+                <td>
+                    <i class="pi"
+                        [ngClass]="{ 'text-green-500 pi-check-circle': customer.verified, 'text-red-500 pi-times-circle': !customer.verified }"></i>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            <tr>
+                <td colspan="5">No customers found.</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+
+<br>
+<p-divider></p-divider>
+<br>
+
+<label for=""><strong>Model filter : </strong></label>
+<div class="card">
+    <p-table #dt1 [value]="customers" dataKey="id" [rows]="10" [showCurrentPageReport]="true"
+        [rowsPerPageOptions]="[10, 25, 50]" [loading]="loading" [paginator]="true"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [globalFilterFields]="['name', 'country.name', 'representative.name', 'status']">
+        <!-- <ng-template pTemplate="caption">
+            <div class="flex">
+                <button pButton label="Clear" class="p-button-outlined" icon="pi pi-filter-slash"
+                    (click)="clear(dt1)"></button>
+                <span class="p-input-icon-left ml-auto">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" placeholder="Search keyword" />
+                </span>
+            </div>
+        </ng-template> -->
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="min-width:15rem">
+                    <div class="flex align-items-center">
+                        Name
+                        <p-columnFilter type="text" field="name" display="menu"></p-columnFilter>
+                    </div>
+                </th>
+                <th style="min-width:15rem">
+                    <div class="flex align-items-center">
+                        Country
+                        <p-columnFilter type="text" field="country.name" display="menu"></p-columnFilter>
+                    </div>
+                </th>
+                <th style="min-width:15rem">
+                    <div class="flex align-items-center">
+                        Agent
+                        <p-columnFilter field="representative" matchMode="in" display="menu" [showMatchModes]="false"
+                            [showOperator]="false" [showAddButton]="false">
+                            <ng-template pTemplate="header">
+                                <div class="px-3 pt-3 pb-0">
+                                    <span class="font-bold">Agent Picker</span>
+                                </div>
+                            </ng-template>
+                            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                                <p-multiSelect [ngModel]="value" placeholder="Any" optionLabel="name">
+                                    <ng-template let-option pTemplate="item">
+                                        <div class="inline-block vertical-align-middle">
+                                            <img [alt]="option.label"
+                                                src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ option.image }}"
+                                                width="24" class="vertical-align-middle" />
+                                            <span class="ml-1 mt-1">{{ option.name }}</span>
+                                        </div>
+                                    </ng-template>
+                                </p-multiSelect>
+                            </ng-template>
+                        </p-columnFilter>
+                    </div>
+                </th>
+                <th style="min-width:10rem">
+                    <div class="flex align-items-center">
+                        Date
+                        <p-columnFilter type="date" field="date" display="menu"></p-columnFilter>
+                    </div>
+                </th>
+                <th style="min-width:10rem">
+                    <div class="flex align-items-center">
+                        Balance
+                        <p-columnFilter type="numeric" field="balance" display="menu" currency="USD"></p-columnFilter>
+                    </div>
+                </th>
+                <th style="min-width:10rem">
+                    <div class="flex align-items-center">
+                        Status
+                        <p-columnFilter field="status" matchMode="equals" display="menu">
+                            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                                <p-dropdown [ngModel]="value" placeholder="Any">
+                                    <ng-template let-option pTemplate="item">
+                                        <p-tag [value]="option.value"></p-tag>
+                                    </ng-template>
+                                </p-dropdown>
+                            </ng-template>
+                        </p-columnFilter>
+                    </div>
+                </th>
+                <th style="min-width:10rem">
+                    <div class="flex align-items-center">
+                        Activity
+                        <p-columnFilter field="activity" matchMode="between" display="menu" [showMatchModes]="false"
+                            [showOperator]="false" [showAddButton]="false">
+                            <ng-template pTemplate="filter" let-filter="filterCallback">
+                                <p-slider [ngModel]="activityValues" styleClass="m-3"></p-slider>
+                                <div class="flex align-items-center px-2">
+                                    <span>{{ activityValues[0] }}</span>
+                                    <span>{{ activityValues[1] }}</span>
+                                </div>
+                            </ng-template>
+                        </p-columnFilter>
+                    </div>
+                </th>
+                <th style="width: 3rem">
+                    <div class="flex align-items-center">
+                        Verified
+                        <p-columnFilter type="boolean" field="verified" display="menu"></p-columnFilter>
+                    </div>
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-customer>
+            <tr>
+                <td>
+                    {{ customer.name }}
+                </td>
+                <td>
+                    <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png"
+                        [class]="'flag flag-' + customer.country.code" style="width: 20px" />
+                    <span class="ml-1 vertical-align-middle">{{ customer.country.name }}</span>
+                </td>
+                <td>
+                    <img [alt]="customer.representative.name"
+                        src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ customer.representative.image }}"
+                        width="32" style="vertical-align: middle" />
+                    <span class="ml-1 vertical-align-middle">{{ customer.representative.name }}</span>
+                </td>
+                <td>
+                    {{ customer.date | date: 'MM/dd/yyyy' }}
+                </td>
+                <td>
+                    {{ customer.balance | currency: 'USD':'symbol' }}
+                </td>
+                <td>
+                    <p-tag [value]="customer.status"></p-tag>
+                </td>
+                <td>
+                    <!-- <p-progressBar [value]="customer.activity" [showValue]="false"></p-progressBar> -->
+                </td>
+                <td class="text-center">
+                    <i class="pi"
+                        [ngClass]="{ 'text-green-500 pi-check-circle': customer.verified, 'text-red-500 pi-times-circle': !customer.verified }"></i>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            <tr>
+                <td colspan="7">No customers found.</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+
+<br>
+<p-divider></p-divider>
+<br>
+
+<label for=""><strong>Custom sort : </strong></label>
+<div class="card">
+    <p-table [value]="customers" [lazy]="true" dataKey="id" [tableStyle]="{ 'min-width': '75rem' }" [paginator]="true"
+        [rows]="10" [loading]="loading"
+        [globalFilterFields]="['name', 'country.name', 'company', 'representative.name']">
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width: 4rem"></th>
+                <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon></th>
+                <th pSortableColumn="country.name">Country <p-sortIcon field="country.name"></p-sortIcon></th>
+                <th pSortableColumn="company">Company <p-sortIcon field="company"></p-sortIcon></th>
+                <th pSortableColumn="representative.name">Representative <p-sortIcon
+                        field="representative.name"></p-sortIcon></th>
+            </tr>
+            <tr>
+                <th style="width: 4rem">
+                    <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                </th>
+                <th>
+                    <div class="relative">
+                        <input class="w-full h-10 pl-4 rounded-lg border" type="text" placeholder="Search..">
+                        <div class="absolute inset-y-0 right-2 flex items-center">
+                            <span class="material-symbols-outlined hover:cursor-pointer">
+                                search
+                            </span>
+                        </div>
+                    </div>
+                </th>
+                <th>
+                    <div class="relative">
+                        <input class="w-full h-10 pl-4 rounded-lg border" type="text" placeholder="Search..">
+                        <div class="absolute inset-y-0 right-2 flex items-center">
+                            <span class="material-symbols-outlined hover:cursor-pointer">
+                                search
+                            </span>
+                        </div>
+                    </div>
+                </th>
+                <th>
+                    <div class="relative">
+                        <input class="w-full h-10 pl-4 rounded-lg border" type="text" placeholder="Search..">
+                        <div class="absolute inset-y-0 right-2 flex items-center">
+                            <span class="material-symbols-outlined hover:cursor-pointer">
+                                search
+                            </span>
+                        </div>
+                    </div>
+                </th>
+                <th>
+                    <p-columnFilter field="representative" matchMode="in" [showMenu]="false">
+                        <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                            <p-multiSelect [ngModel]="value" appendTo="body" placeholder="Any" optionLabel="name">
+                                <ng-template let-option pTemplate="item">
+                                    <div class="inline-block vertical-align-middle">
+                                        <img [alt]="option.label"
+                                            src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ option.image }}"
+                                            width="24" class="vertical-align-middle" />
+                                        <span class="ml-1 mt-1">{{ option.name }}</span>
+                                    </div>
+                                </ng-template>
+                            </p-multiSelect>
+                        </ng-template>
+                    </p-columnFilter>
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-customer>
+            <tr>
+                <td>
+                    <p-tableCheckbox [value]="customer"></p-tableCheckbox>
+                </td>
+                <td>{{ customer.name }}</td>
+                <td>{{ customer.country.name }}</td>
+                <td>{{ customer.company }}</td>
+                <td>{{ customer.representative.name }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+
+<br>
+<p-divider></p-divider>
+<br>
+
+<label for=""><strong>Basic : </strong></label>
+<div class="card">
+    <p-table [value]="products" [(selection)]="selectedProducts" dataKey="code" [tableStyle]="{'min-width': '50rem'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width: 4rem">
+                    <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                </th>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Quantity</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>
+                    <p-tableCheckbox [value]="product"></p-tableCheckbox>
+                </td>
+                <td>{{product.code}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.category}}</td>
+                <td>{{product.quantity}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

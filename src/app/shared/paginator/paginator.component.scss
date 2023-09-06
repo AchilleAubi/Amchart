@@ -1,0 +1,62 @@
+.custom-paginator {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.custom-paginator span {
+    margin-right: 10px;
+}
+
+.compact-paginator {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+}
+
+.compact-paginator button {
+    padding: 5px;
+    margin: 0 3px;
+}
+
+.numeric-paginator {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+}
+
+.numeric-paginator li {
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.numeric-paginator li.active {
+    font-weight: bold;
+}
+
+.custom-paginator-5 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.custom-paginator-5 button,
+.custom-paginator-5 span {
+    padding: 5px;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.custom-paginator-5 span.selected-page {
+    background-color: blue;
+    color: #ffffff;
+    font-weight: bold;
+    @apply rounded-md;
+    cursor: pointer;
+}

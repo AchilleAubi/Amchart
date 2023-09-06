@@ -1,0 +1,53 @@
+<cca-sidebar [sidebarVisible]="right" [position]="'right'">
+   <ng-container header>
+      <span class="text-primary font-semibold text-xl">Header</span>
+   </ng-container>
+   Body Content
+   <ng-container footer>
+      Footer content here
+   </ng-container>
+</cca-sidebar>
+<cca-sidebar [sidebarVisible]="left">
+   <ng-container header>
+      <span class="text-primary font-semibold text-xl">Header</span>
+   </ng-container>
+   Body Content
+   <ng-container footer>
+      Footer content here
+   </ng-container>
+</cca-sidebar>
+<cca-sidebar [sidebarVisible]="top" [position]="'top'">
+   <ng-container header>
+      <span class="text-primary font-semibold text-xl">Header</span>
+   </ng-container>
+   Body Content
+   <ng-container footer>
+      Footer content here
+   </ng-container>
+</cca-sidebar>
+<cca-sidebar [sidebarVisible]="bottom" [position]="'bottom'">
+   <ng-container header>
+      <span class="text-primary font-semibold text-xl">Header</span>
+   </ng-container>
+   Body Content
+   <ng-container footer>
+      Footer content here
+   </ng-container>
+</cca-sidebar>
+<cca-sidebar [sidebarVisible]="full" [full]="true">
+   <ng-container header>
+      <span class="text-primary font-semibold text-xl">Header</span>
+   </ng-container>
+   Body Content
+   <ng-container footer>
+      Footer content here
+   </ng-container>
+</cca-sidebar>
+
+<div class="card flex justify-content-center gap-2">
+   <p-button (click)="left = true" icon="pi pi-arrow-right" styleClass="p-button-info"></p-button>
+   <p-button (click)="right = true" icon="pi pi-arrow-left" styleClass="p-button-info"></p-button>
+   <p-button (click)="top = true" icon="pi pi-arrow-down" styleClass="p-button-info"></p-button>
+   <p-button (click)="bottom = true" icon="pi pi-arrow-up" styleClass="p-button-info"></p-button>
+   <p-button (click)="full = true" icon="pi pi-th-large" styleClass="p-button-info"></p-button>
+</div>

@@ -1,0 +1,37 @@
+<p-dropdown
+  *ngIf="type === 'simple'"
+  [options]="data"
+  styleClass="{{ width }}"
+  [(ngModel)]="oneValue"
+  optionLabel="name"
+  placeholder="{{ placeholder }}"
+></p-dropdown>
+
+<p-multiSelect
+  *ngIf="type === 'multiple-basic'"
+  [options]="data"
+  placeholder="{{ placeholder }}"
+  [(ngModel)]="multipleValue"
+  styleClass="{{ width }}"
+  optionLabel="name"
+></p-multiSelect>
+
+<p-multiSelect
+  *ngIf="type === 'multiple-chips'"
+  [options]="data"
+  [(ngModel)]="multipleValue"
+  defaultLabel="{{ placeholder }}"
+  styleClass="{{ width }}"
+  optionLabel="name"
+  display="chip"
+></p-multiSelect>
+
+<span *ngIf="type === 'multiple-float-label'" class="p-float-label">
+  <p-multiSelect
+    [options]="data"
+    styleClass="{{ width }}"
+    [(ngModel)]="multipleValue"
+    optionLabel="name"
+  ></p-multiSelect>
+  <label for="ms-cities">{{ placeholder }}</label>
+</span>

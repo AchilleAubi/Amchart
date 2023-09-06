@@ -1,0 +1,39 @@
+<div *ngIf="type === 'menu'" class="card flex justify-content-center">
+  <p-menu #menu [model]="items" [popup]="popup" (click)="action($event)"></p-menu>
+  <i *ngIf="popup === true" class="pi pi-ellipsis-v hover:cursor-pointer" (click)="menu.toggle($event)"></i>
+</div>
+
+<div class="card" *ngIf="type === 'menu-bar'">
+  <p-menubar [model]="items"></p-menubar>
+</div>
+
+<div class="card" *ngIf="type === 'mega-menu'">
+  <p-megaMenu [model]="megaMenuitems"></p-megaMenu>
+</div>
+
+<div class="card flex justify-content-center" *ngIf="type === 'panel-menu'">
+  <p-panelMenu [model]="items" [style.width]="menuWidth" [multiple]="multiple" iconClass="classIcon"></p-panelMenu>
+</div>
+<!-- <div class="card flex justify-content-center" *ngIf="type === 'panel-menu'">
+  <p-panelMenu [model]="items" [style.width]="menuWidth" [multiple]="multiple" iconClass="classIcon">
+    <ng-template let-item pTemplate="submenu">
+      <li *ngIf="item.separator" class="ui-menu-separator"></li>
+      <li *ngIf="!item.separator">
+        <a *ngIf="!item.routerLink" [routerLink]="item.routerLink" [ngClass]="{'ui-state-disabled': item.disabled}"
+          (click)="handleIconClick($event, item)">
+          <i [class]="item.icon"></i>
+          <span>{{ item.label }}</span>
+        </a>
+        <a *ngIf="item.routerLink" [routerLink]="item.routerLink" [ngClass]="{'ui-state-disabled': item.disabled}"
+          (click)="handleIconClick($event, item)">
+          <i [class]="item.icon"></i>
+          <span>{{ item.label }}</span>
+        </a>
+      </li>
+    </ng-template>
+  </p-panelMenu>
+</div> -->
+
+<div class="card" *ngIf="type === 'tab-menu'">
+  <p-tabMenu [model]="items"></p-tabMenu>
+</div>

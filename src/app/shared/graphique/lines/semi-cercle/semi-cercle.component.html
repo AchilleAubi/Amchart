@@ -1,0 +1,9 @@
+<div id="semi"></div>
+
+<!-- Legend -->
+<div class="legend">
+  <div *ngFor="let dataItem of data" class="legend-item">
+    <span [style.background-color]="dataItem.color"></span>
+    {{ dataItem.category }}
+  </div>
+</div>

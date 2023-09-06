@@ -1,0 +1,90 @@
+name: Build and Deploy docker image Stable ENV
+on:
+  push:
+    branches:
+      - main
+env:
+  ROOT_PATH: /home/gh_action/docker-stacks/cca-charte-graphique
+
+jobs:
+  qodana:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      checks: write
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}  # to check out the actual pull request commit, not the merge commit
+          fetch-depth: 0  # a full history is required for pull request analysis
+      - name: 'Qodana Scan'
+        uses: JetBrains/qodana-action@v2023.2
+        env:
+          QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
+  build:
+    name: Pull, Build, and Publish
+
+    runs-on: ubuntu-latest
+    needs: [qodana]
+
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.4.1
+        if: ${{ github.event_name == 'push' }}
+        with:
+          access_token: ${{ github.token }}
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.CCA_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.CCA_AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-3
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Build, tag, and push image to Amazon ECR
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: cca-charte-graphique
+          IMAGE_TAG: main-${GITHUB_SHA:0:8}
+        run: |
+          export IMAGE_TAG=main-${GITHUB_SHA:0:8}
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+
+      - name: Notify
+        if: always() && github.event_name=='push'
+        env:
+          STATUS: ${{ job.status }}
+          BRANCH: ${{ github.ref }}
+          COMMIT_MESSAGE: ${{ github.event.commits[0].message }}
+          SLACK_URL: ${{ secrets.CI_ALERTS_WEBHOOK }}
+        run: ./.github/.scripts/notify.sh
+        shell: bash
+  deploy-stable:
+    name: Deploy main
+
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    steps:
+
+      - name: Deploy via ssh to cca-prod-1
+        run: |
+          eval $(ssh-agent -s)
+          echo "${{ secrets.CCA_DEV_PRIVATE_HOST_KEY }}" | tr -d '\r' | ssh-add -
+          mkdir -p ~/.ssh
+          chmod 760 ~/.ssh
+          ssh -o StrictHostKeyChecking=no gh_action@${{ secrets.CCA_DEV_HOST }} -p51988 "cd \"${ROOT_PATH}\";export IMAGE_TAG=main-${GITHUB_SHA:0:8};echo $IMAGE_TAG;echo $IMAGE_TAG > ./system.env;aws ecr get-login-password --region eu-west-3 --profile githubaction | docker login --username AWS --password-stdin 906484796240.dkr.ecr.eu-west-3.amazonaws.com;docker-compose --env-file system.env up -d --remove-orphans "
+
+
+
+

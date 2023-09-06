@@ -1,0 +1,186 @@
+<div class="centered-div">
+  <p><strong>Colonne avec rotation label</strong></p>
+  <div id="error-chart-container">
+    <cca-rotated-label [chartData]="chartData"></cca-rotated-label>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div class="centered-div">
+  <p><strong>100% stacked colonne charte</strong></p>
+  <div id="line-chart-container">
+    <cca-stacked-colomn [chartData]="data" [seriesData]="seriesData"></cca-stacked-colomn>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div class="centered-div">
+  <p><strong>Line graph</strong></p>
+  <div id="line-chart-container">
+    <cca-line-graph [data]="datalinegraph"></cca-line-graph>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div class="centered-div">
+  <p><strong>multiples values axes</strong></p>
+  <div id="line-chart-container">
+    <cca-line [data]="yourData"></cca-line>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div class="centered-div">
+  <p><strong>Curved Columns</strong></p>
+  <div id="line-chart-container">
+    <cca-curved-colomn [chartData]="curvedData"></cca-curved-colomn>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div class="centered-div">
+  <p><strong>Around chart</strong></p>
+  <div id="line-chart-container">
+    <cca-around-chart [chartData]="aroundData"></cca-around-chart>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div class="centered-div">
+  <p><strong>pie chart</strong></p>
+  <div id="line-chart-container">
+    <cca-pie-chart [chartData]="aroundData"></cca-pie-chart>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div class="centered-div">
+  <p><strong>semi cercle chart</strong></p>
+  <div id="line-chart-container">
+    <cca-semi-cercle [chartData]="aroundData"></cca-semi-cercle>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div class="centered-div">
+  <p><strong>divergent line</strong></p>
+  <div id="line-chart-container">
+    <cca-divergent-line [data]="myData" [series]="mySeries"></cca-divergent-line>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div class="mb-1 text-base font-medium text-blue-700" style="display: flex; justify-content: space-between;">
+  <p style="margin-right: auto;">Bleu</p>
+  <p style="margin-left: auto;">45%</p>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+  <div class="bg-blue-600 h-2.5 rounded-full" style="width: 45%"></div>
+</div>
+<div class="mb-1 text-base font-medium text-red-700" style="display: flex; justify-content: space-between;">
+  <p style="margin-right: auto;">Red</p>
+  <p style="margin-left: auto;">45%</p>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+  <div class="bg-red-600 h-2.5 rounded-full" style="width: 45%"></div>
+</div>
+<div class="mb-1 text-base font-medium text-green-700" style="display: flex; justify-content: space-between;">
+  <p style="margin-right: auto;">Green</p>
+  <p style="margin-left: auto;">45%</p>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+  <div class="bg-green-600 h-2.5 rounded-full" style="width: 45%"></div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div class="w-64">
+  <div class="flex">
+    <div class="flex-1">
+      <div class="w-full flex items-center justify-center mx-2">
+        <div class="bg-gray-200 rounded-full h-40 w-2.5 mr-4" style="transform: scaleY(-1);">
+          <div class="bg-green-600 h-2.5 rounded-full" style="height: 45%; transform: scaleY(-1);">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-1">
+      <div class="w-full flex items-center justify-center mx-2">
+        <div class="bg-gray-200 rounded-full h-40 w-2.5 mr-4" style="transform: scaleY(-1);">
+          <div class="bg-blue-600 h-2.5 rounded-full" style="height: 45%; transform: scaleY(-1);">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-1">
+      <div class="w-full flex items-center justify-center mx-2">
+        <div class="bg-gray-200 rounded-full h-40 w-2.5" style="transform: scaleY(-1);">
+          <div class="bg-red-600 h-2.5 rounded-full" style="height: 45%; transform: scaleY(-1);"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+<div class="w-full">
+  <div class="flex items-center justify-center">
+    <div class="flex-1">
+      <div class="w-full flex flex-col items-center justify-center mx-4">
+        <div class="rounded-full">
+          <div class="flex flex-col items-center justify-center"> <!-- Ajout des classes pour centrer l'icône -->
+            <p><svg class="w-6 h-6 text-green-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor" viewBox="0 0 18 20">
+                <path
+                  d="M16 0H2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 17h-3a1 1 0 0 1 0-2h3a1 1 0 0 1 0 2Z" />
+              </svg></p>
+            <p class="text-center">Contributeurs uniques</p>
+            <p class="text-center text-green-600">45%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-l border-gray-500 h-16"></div> <!-- Vertical separator -->
+    <div class="flex-1">
+      <div class="w-full flex flex-col items-center justify-center mx-4">
+        <div class="rounded-full">
+          <div class="flex flex-col items-center justify-center"> <!-- Ajout des classes pour centrer l'icône -->
+            <p><svg class="w-6 h-6 text-blue-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor" viewBox="0 0 18 20">
+                <path
+                  d="M16 0H2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 17h-3a1 1 0 0 1 0-2h3a1 1 0 0 1 0 2Z" />
+              </svg></p>
+            <p class="text-center">Visiteurs uniques</p>
+            <p class="text-center text-blue-600">45%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-l border-gray-500 h-16"></div> <!-- Vertical separator -->
+    <div class="flex-1">
+      <div class="w-full flex flex-col items-center justify-center mx-4">
+        <div class="rounded-full">
+          <div class="flex flex-col items-center justify-center"> <!-- Ajout des classes pour centrer l'icône -->
+            <p><svg class="w-6 h-6 text-red-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor" viewBox="0 0 18 20">
+                <path
+                  d="M16 0H2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 17h-3a1 1 0 0 1 0-2h3a1 1 0 0 1 0 2Z" />
+              </svg></p>
+            <p class="text-center">Visites</p>
+            <p class="text-center text-red-600">45%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>

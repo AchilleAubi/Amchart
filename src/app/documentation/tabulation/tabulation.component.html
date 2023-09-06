@@ -1,0 +1,41 @@
+<div>
+  <div>
+    <label for="searchInput" class="mb-4"><strong>Basic + disabled</strong></label>
+  </div>
+  <div class="mt-4">
+    <cca-Tabs [type]="'basic'" [dataParams]="dataItems"></cca-Tabs>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div>
+  <div>
+    <label for="searchInput" class="mb-4"><strong>Template</strong></label>
+  </div>
+  <div class="mt-4">
+    <cca-Tabs [type]="'template'" [dataParams]="dataItems"></cca-Tabs>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div>
+  <div>
+    <label for="searchInput" class="mb-4"><strong>Closable</strong></label>
+  </div>
+  <div class="mt-4">
+    <cca-Tabs [type]="'template'" [dataParams]="dataItemsClosable"></cca-Tabs>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div>
+  <div>
+    <label for="searchInput" class="mb-4"><strong>Scrollable</strong></label>
+  </div>
+  <div class="mt-4">
+    <cca-Tabs [type]="'basic'" [dataParams]="scrollableTabs" [scrollable]="true"></cca-Tabs>
+  </div>
+</div>

@@ -1,0 +1,85 @@
+<div class="card">
+  <div class="flex items-center justify-center flex-wrap"><strong>Select</strong></div>
+  <p-tabView>
+    <p-tabPanel header="Demo">
+      <div>
+        <div>
+          <label for="searchInput" class="mb-4"><strong>select simple</strong></label>
+        </div>
+        <div class="mt-4">
+          <cca-select [type]="'simple'" [data]="cities" [placeholder]="'Choose an option'" [width]="'w-1/2'"
+            [oneValue]=""></cca-select>
+        </div>
+      </div>
+      <br>
+      <p-divider></p-divider>
+      <br>
+      <div>
+        <div>
+          <label for="searchInput" class="mb-4"><strong>select multiple float label</strong></label>
+        </div>
+        <div class="mt-4">
+          <cca-select [type]="'multiple-float-label'" [data]="cities" [placeholder]="'Choose an option'"
+            [width]="'w-1/2'" [multipleValue]=""></cca-select>
+        </div>
+      </div>
+      <br>
+      <p-divider></p-divider>
+      <br>
+      <div>
+        <div>
+          <label for="searchInput" class="mb-4"><strong>select multiple basic</strong></label>
+        </div>
+        <div class="mt-4">
+          <cca-select [type]="'multiple-basic'" [data]="cities" [placeholder]="'Choose an option'" [width]="'w-1/2'"
+            [multipleValue]=""></cca-select>
+        </div>
+      </div>
+      <br>
+      <p-divider></p-divider>
+      <br>
+      <div>
+        <div>
+          <label for="searchInput" class="mb-4"><strong>select multiple chips</strong></label>
+        </div>
+        <div class="mt-4">
+          <cca-select [type]="'multiple-chips'" [data]="cities" [placeholder]="'Choose an option'" [width]="'w-1/2'"
+            [multipleValue]=""></cca-select>
+        </div>
+      </div>
+      <br>
+      <p-divider></p-divider>
+      <br>
+    </p-tabPanel>
+    <p-tabPanel header="HTML">
+      <pre>
+        <span class="text-info">&lt;cca-select</span> [type]="'simple'" [data]="cities" [placeholder]="'Choose an option'" [width]="'w-1/2'"
+        [oneValue]=""> <span class="text-info">&lt;/cca-select&gt;</span>
+      </pre>
+      <br>
+      <pre>
+        <span class="text-info">&lt;cca-select</span> [type]="'multiple-float-label'" [data]="cities" [placeholder]="'Choose an option'"
+          [width]="'w-1/2'" [multipleValue]=""> <span class="text-info">&lt;/cca-select&gt;</span>
+      </pre>
+      <br>
+      <pre>
+        <span class="text-info">&lt;cca-select</span> [type]="'multiple-basic'" [data]="cities" [placeholder]="'Choose an option'" [width]="'w-1/2'"
+          [multipleValue]=""> <span class="text-info">&lt;/cca-select&gt;</span>
+        </pre>
+      <br>
+      <pre>
+          <span class="text-info">&lt;cca-select</span> [type]="'multiple-chips'" [data]="cities" [placeholder]="'Choose an option'" [width]="'w-1/2'"
+          [multipleValue]=""> <span class="text-info">&lt;/cca-select&gt;</span>
+      </pre>
+    </p-tabPanel>
+    <p-tabPanel header="Typescript">
+      <span class="text-info">cities: Select[]</span> = [
+      &#123; name: 'New York', code: 'NY' &#125;,
+      &#123; name: 'Rome', code: 'RM' &#125;,
+      &#123; name: 'London', code: 'LDN' &#125;,
+      &#123; name: 'Istanbul', code: 'IST' &#125;,
+      &#123; name: 'Paris', code: 'PRS' &#125;
+      ];
+    </p-tabPanel>
+  </p-tabView>
+</div>

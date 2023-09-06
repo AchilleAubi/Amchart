@@ -1,0 +1,19 @@
+<div>
+    <div>
+        <label for="searchInput" class="mb-4"><strong>Stepper Basic</strong></label>
+    </div>
+    <div class="mt-4">
+        <cca-stepper [type]="'basic'" [items]="items" (action)="stepperAction($event)"></cca-stepper>
+    </div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div>
+    <div>
+        <label for="searchInput" class="mb-4"><strong>Stepper with button</strong></label>
+    </div>
+    <div class="mt-4">
+        <cca-stepper [type]="'steps-button'" [items]="items" (action)="stepperAction($event)"></cca-stepper>
+    </div>
+</div>

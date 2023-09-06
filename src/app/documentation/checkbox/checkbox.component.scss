@@ -1,0 +1,57 @@
+::ng-deep {
+  .primaryRadio {
+    .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
+      @apply border-primary;
+    }
+    .p-radiobutton .p-radiobutton-box.p-highlight {
+      @apply border-primary bg-primary;
+    }
+    .p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
+      @apply border-primary bg-primary;
+    }
+  }
+  .secondaryRadio {
+    .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
+      @apply border-secondary;
+    }
+    .p-radiobutton .p-radiobutton-box.p-highlight {
+      @apply border-secondary bg-secondary;
+    }
+    .p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
+      @apply border-secondary bg-secondary;
+    }
+  }
+  .successRadio {
+    .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
+      @apply border-success;
+    }
+    .p-radiobutton .p-radiobutton-box.p-highlight {
+      @apply border-success bg-success;
+    }
+    .p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
+      @apply border-success bg-success;
+    }
+  }
+  .warningRadio {
+    .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
+      @apply border-warn;
+    }
+    .p-radiobutton .p-radiobutton-box.p-highlight {
+      @apply border-warn bg-warn;
+    }
+    .p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
+      @apply border-warn bg-warn;
+    }
+  }
+  .errorRadio {
+    .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
+      @apply border-error;
+    }
+    .p-radiobutton .p-radiobutton-box.p-highlight {
+      @apply border-error bg-error;
+    }
+    .p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
+      @apply border-error bg-error;
+    }
+  }
+}

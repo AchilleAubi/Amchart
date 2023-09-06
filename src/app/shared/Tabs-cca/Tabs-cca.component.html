@@ -1,0 +1,27 @@
+<div class="card">
+  <p-tabView *ngIf="type === 'basic'" [(activeIndex)]="activeIndex" [scrollable]="scrollable">
+    <p-tabPanel *ngFor="let item of dataParams" header="{{item.header}}" [disabled]="item.disabled"
+      [closable]="item.closable">
+      <p>
+        {{item.content}}
+      </p>
+    </p-tabPanel>
+  </p-tabView>
+
+  <p-tabView *ngIf="type === 'template'">
+    <p-tabPanel *ngFor="let item of dataParams" [disabled]="item.disabled" [closable]="item.closable">
+      <ng-template pTemplate="header">
+        <div>
+          <!-- necessaire pour icon à gauche -->
+          <i *ngIf="item.posIcon === 'left'" class="{{item.icon}} mr-2"></i>
+          <span>{{item.header}}</span>
+          <!-- necessaire pour icon à droite -->
+          <i *ngIf="item.posIcon === 'right'" class="{{item.icon}} ml-2"></i>
+        </div>
+      </ng-template>
+      <p>
+        {{item.content}}
+      </p>
+    </p-tabPanel>
+  </p-tabView>
+</div>

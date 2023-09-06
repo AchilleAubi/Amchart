@@ -1,0 +1,14 @@
+<ng-container *ngIf="model === 'native'">
+  <div class="custom-paginator-5">
+    <button (click)="changePage(1)">First</button>
+    <button (click)="changePage(currentPage - 1)">&lt;&lt;</button>
+    <ng-container *ngFor="let page of getCustomPagesArray()">
+      <span [ngClass]="{ 'selected-page': currentPage === page }" (click)="changePage(page)">{{ page }}</span>
+    </ng-container>
+    <button (click)="changePage(currentPage + 1)">&gt;&gt;</button>
+    <button (click)="changePage(totalPages)">Last</button>
+  </div>
+</ng-container>
+
+<p-paginator *ngIf="model === 'primeng'" (onPageChange)="onPageChange($event)" [first]="Data.first" [rows]="Data.rows"
+  [totalRecords]="Data.page" [rowsPerPageOptions]="Data.rowsPerPageOptions"></p-paginator>

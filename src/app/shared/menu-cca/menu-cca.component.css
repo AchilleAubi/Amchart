@@ -1,0 +1,37 @@
+:host ::ng-deep .p-menu .p-menuitem-link .p-menuitem-text {
+    color: #000 !important;
+}
+
+:host ::ng-deep .p-menu .p-menuitem-link .p-menuitem-icon {
+    color: #000 !important;
+}
+
+:host ::ng-deep .p-menu .p-submenu-header {
+    color: #000 !important;
+}
+
+:host ::ng-deep .p-menu .p-menuitem-link:focus,
+.p-menu .p-menuitem-link:hover {
+    background: white !important;
+}
+
+:host ::ng-deep .p-menu .p-menuitem-link:focus {
+    box-shadow: 0 0 0 0.1rem white !important;
+}
+
+:host ::ng-deep .p-menu .p-menuitem-link:hover,
+.p-menu .p-menuitem-link:hover {
+    @apply bg-info-100 text-info !important;
+}
+
+:host ::ng-deep .p-menu .p-menuitem-link:hover {
+    box-shadow: 0 0 0 0.1rem white !important;
+}
+
+:host ::ng-deep .p-menu .p-menuitem-link .p-menuitem-icon:hover {
+    @apply text-info !important;
+}
+
+:host ::ng-deep .p-menu .p-menuitem-link .p-menuitem-text:hover {
+    @apply text-info !important;
+}

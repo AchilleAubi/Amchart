@@ -1,0 +1,155 @@
+<div class="card">
+  <div class="flex items-center justify-center flex-wrap">
+    <strong>toogle</strong>
+  </div>
+  <p-tabView>
+    <p-tabPanel header="Demo">
+      <section>
+        <div>toogle multiples</div>
+        <div class="flex items-center justify-between flex-wrap">
+          <div class="primary-toggle">
+            <cca-button-toggle-group
+              [options]="primaryOptions"
+              [value]="primaryvalue"
+            ></cca-button-toggle-group>
+          </div>
+          <div class="secondary-toggle">
+            <cca-button-toggle-group
+              [options]="secondaryOptions"
+              [value]="secondaryvalue"
+            ></cca-button-toggle-group>
+          </div>
+          <div class="success-toggle">
+            <cca-button-toggle-group
+              [options]="successOptions"
+              [value]="successvalue"
+            ></cca-button-toggle-group>
+          </div>
+          <div class="info-toggle">
+            <cca-button-toggle-group
+              [options]="InfoOptions"
+              [value]="infovalue"
+            ></cca-button-toggle-group>
+          </div>
+        </div>
+      </section>
+      <p-divider></p-divider>
+      <section>
+        <div class="flex items-center justify-between flex-wrap mt-2">
+          <div class="toggle-background-padding primary-toggle-full">
+            <cca-button-toggle-group
+              [options]="primaryOptions"
+              [value]="primaryvalue"
+            ></cca-button-toggle-group>
+          </div>
+          <div class="toggle-background-padding secondary-toggle-full">
+            <cca-button-toggle-group
+              [options]="secondaryOptions"
+              [value]="secondaryvalue"
+            ></cca-button-toggle-group>
+          </div>
+          <div class="toggle-background-padding success-toggle-full">
+            <cca-button-toggle-group
+              [options]="successOptions"
+              [value]="successvalue"
+            ></cca-button-toggle-group>
+          </div>
+          <div class="toggle-background-padding info-toggle-full">
+            <cca-button-toggle-group
+              [options]="InfoOptions"
+              [value]="infovalue"
+            ></cca-button-toggle-group>
+          </div>
+        </div>
+      </section>
+      <br />
+      <section>
+        <div>toogle multiples full</div>
+        <div class="flex items-center justify-between flex-wrap">
+          <div class="toggle-background-padding primary-toggle-rounded-full">
+            <cca-button-toggle-group
+              [options]="primaryOptions"
+              [value]="primaryvalue"
+            ></cca-button-toggle-group>
+          </div>
+          <div class="toggle-background-padding secondary-toggle-rounded-full">
+            <cca-button-toggle-group
+              [options]="secondaryOptions"
+              [value]="secondaryvalue"
+            ></cca-button-toggle-group>
+          </div>
+          <div class="toggle-background-padding success-toggle-rounded-full">
+            <cca-button-toggle-group
+              [options]="successOptions"
+              [value]="successvalue"
+            ></cca-button-toggle-group>
+          </div>
+          <div class="toggle-background-padding info-toggle-rounded-full">
+            <cca-button-toggle-group
+              [options]="InfoOptions"
+              [value]="infovalue"
+            ></cca-button-toggle-group>
+          </div>
+        </div>
+      </section>
+      <p-divider></p-divider>
+      <section>
+        <div class="example-label">toogle double</div>
+        <div class="flex items-center justify-around flex-wrap">
+          <div class="error-double">
+            <cca-button-toggle-group
+              [options]="errorDoubleOptions"
+              [value]="primaryvalue"
+            ></cca-button-toggle-group>
+          </div>
+          <div class="warning-double">
+            <cca-button-toggle-group
+              [options]="warningDoubleOptions"
+              [value]="secondaryvalue"
+            ></cca-button-toggle-group>
+          </div>
+        </div>
+      </section>
+      <p-divider></p-divider>
+    </p-tabPanel>
+    <p-tabPanel header="HTML">
+      <pre>
+    &lt;cca-button-toggle-group [options]="primaryOptions" [value]="primaryvalue">&lt;/cca-button-toggle-group&gt;
+    &lt;cca-button-toggle-group [options]="secondaryOptions" [value]="secondaryvalue">&lt;/cca-button-toggle-group&gt;
+    &lt;cca-button-toggle-group [options]="successOptions" [value]="successvalue">&lt;/cca-button-toggle-group&gt;
+    &lt;cca-button-toggle-group [options]="InfoOptions" [value]="infovalue">&lt;/cca-button-toggle-group&gt;
+  </pre
+      >
+      <br />
+      <pre>
+    &lt;cca-button-toggle-group [options]="primaryOptions" [value]="primaryvalue">&lt;/cca-button-toggle-group&gt;
+    &lt;cca-button-toggle-group [options]="secondaryOptions" [value]="secondaryvalue">&lt;/cca-button-toggle-group&gt;
+    &lt;cca-button-toggle-group [options]="successOptions" [value]="successvalue">&lt;/cca-button-toggle-group&gt;
+    &lt;cca-button-toggle-group [options]="InfoOptions" [value]="infovalue">&lt;/cca-button-toggle-group&gt;
+  </pre
+      >
+      <br />
+      <pre>
+    &lt;cca-button-toggle-group [options]="primaryOptions" [value]="primaryvalue">&lt;/cca-button-toggle-group&gt;
+    &lt;cca-button-toggle-group [options]="secondaryOptions" [value]="secondaryvalue">&lt;/cca-button-toggle-group&gt;
+    &lt;cca-button-toggle-group [options]="successOptions" [value]="successvalue">&lt;/cca-button-toggle-group&gt;
+    &lt;cca-button-toggle-group [options]="InfoOptions" [value]="infovalue">&lt;/cca-button-toggle-group&gt;
+  </pre
+      >
+      <br />
+      <pre>
+    &lt;cca-button-toggle-group [options]="errorDoubleOptions" [value]="primaryvalue">&lt;/cca-button-toggle-group&gt;
+    &lt;cca-button-toggle-group [options]="warningDoubleOptions" [value]="secondaryvalue">&lt;/cca-button-toggle-group&gt;
+  </pre
+      >
+    </p-tabPanel>
+    <p-tabPanel header="Typescript">
+      <pre>
+          primaryvalue!: number; <br />
+      secondaryvalue!: number; <br />
+      successvalue!: number; <br />
+      infovalue!: number; <br /><br />
+      </pre>
+    </p-tabPanel>
+  </p-tabView>
+</div>

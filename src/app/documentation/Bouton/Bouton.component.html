@@ -1,0 +1,642 @@
+<div class="card">
+  <div class="flex items-center justify-center flex-wrap">
+    <strong>Bouton d'action principale</strong>
+  </div>
+  <p-tabView>
+    <p-tabPanel header="Demo">
+      <div class="flex items-center justify-center flex-wrap">
+        <div class="flex justify-center items-center flex-wrap">
+          <cca-buttons
+            [btnConfig]="{
+              type: 'Primary',
+              label: 'Primary',
+              icon: 'pi pi-save',
+              styledClass:
+                'mr-2 mt-2 bg-primary rounded border-transparent hover:bg-blue-500',
+            }"
+            [buttonType]="'full'"
+          ></cca-buttons>
+          <cca-buttons
+            [btnConfig]="{
+              type: 'Secondary',
+              label: 'Secondary',
+              icon: 'pi pi-bookmark',
+              styledClass:
+                'bg-secondary border-transparent hover:bg-primary-900 mr-2 mt-2 focus:bg-primary-900',
+            }"
+            [buttonType]="'full'"
+          ></cca-buttons>
+          <cca-buttons
+            [btnConfig]="{
+              type: 'Success',
+              label: 'Success',
+              icon: 'pi pi-check',
+              styledClass:
+                'bg-success border-transparent hover:bg-green-700 mr-2 mt-2',
+            }"
+            [buttonType]="'full'"
+          ></cca-buttons>
+          <cca-buttons
+            [btnConfig]="{
+              type: 'Info',
+              label: 'Info',
+              icon: 'pi pi-info-circle',
+              styledClass: 'bg-info border-transparent hover:bg-cyan-400 mr-2 mt-2',
+            }"
+            [buttonType]="'full'"
+          ></cca-buttons>
+          <cca-buttons
+            [btnConfig]="{
+              type: 'Warn',
+              label: 'Warn',
+              icon: 'pi pi-exclamation-triangle',
+              styledClass: 'bg-warn border-transparent hover:bg-yellow-600 mr-2 mt-2',
+            }"
+            [buttonType]="'full'"
+          ></cca-buttons>
+          <cca-buttons
+            [btnConfig]="{
+              type: 'Error',
+              label: 'Error',
+              icon: 'pi pi-exclamation-circle',
+              styledClass: 'bg-error border-transparent hover:bg-red-400 mr-2 mt-2',
+            }"
+            [buttonType]="'full'"
+          ></cca-buttons>
+          <cca-buttons
+            [btnConfig]="{
+              type: 'Disabled',
+              label: 'Disabled',
+              icon: 'pi pi-exclamation-circle',
+              styledClass:
+                'bg-gray-300 border-transparent hover:bg-gray-300 focus:bg-gray-300 mr-2 mt-2',
+              disabled: true
+            }"
+            [buttonType]="'full'"
+          ></cca-buttons>
+        </div>
+      </div>
+      <br />
+      <p-divider></p-divider>
+      <br />
+      <div class="flex items-center justify-center flex-wrap">
+        <cca-buttons
+          [btnConfig]="{
+    type: 'primary',
+    label: 'primary',
+    styledClass:
+      'mr-2 mt-2 p-button-rounded bg-primary border-transparent hover:bg-blue-500',
+  }"
+          [buttonType]="'full'"
+        ></cca-buttons>
+        <cca-buttons
+          [btnConfig]="{
+    type: 'secondary',
+    label: 'secondary',
+    styledClass:
+    'mr-2 mt-2 p-button-rounded bg-secondary border-transparent hover:bg-primary-900 mr-2 focus:bg-primary-900',
+  }"
+          [buttonType]="'full'"
+        ></cca-buttons>
+        <cca-buttons
+          [btnConfig]="{
+    type: 'success',
+    label: 'success',
+    styledClass:
+    'mr-2 mt-2 p-button-rounded bg-success border-transparent hover:bg-green-700',
+  }"
+          [buttonType]="'full'"
+        ></cca-buttons>
+        <cca-buttons
+          [btnConfig]="{
+    type: 'info',
+    label: 'info',
+    styledClass:
+    'mr-2 mt-2 p-button-rounded bg-info border-transparent hover:bg-cyan-400',
+  }"
+          [buttonType]="'full'"
+        ></cca-buttons>
+        <cca-buttons
+          [btnConfig]="{
+    type: 'warn',
+    label: 'warn',
+    styledClass:
+    'mr-2 mt-2 p-button-rounded bg-warn border-transparent hover:bg-yellow-600',
+  }"
+          [buttonType]="'full'"
+        ></cca-buttons>
+        <cca-buttons
+          [btnConfig]="{
+    type: 'error',
+    label: 'error',
+    styledClass:
+    'mr-2 mt-2 p-button-rounded bg-error border-transparent hover:bg-red-400',
+  }"
+          [buttonType]="'full'"
+        ></cca-buttons>
+        <cca-buttons
+          [btnConfig]="{
+            type: 'Disabled',
+            label: 'Disabled',
+            styledClass:
+              'mr-2 mt-2 p-button-rounded bg-gray-300 border-transparent hover:bg-gray-300 focus:bg-gray-300',
+            disabled: true
+          }"
+          [buttonType]="'full'"
+        ></cca-buttons>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="HTML">
+      <div>
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&#123; type:
+        'Primary', label: 'Primary', icon: 'pi pi-save', styledClass: 'mr-2 mt-2
+        bg-primary rounded border-transparent hover:bg-blue-500', &#125;"
+        [buttonType]="'full'"><span class="text-info"
+          >&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&#123; type:
+        'Secondary', label: 'Secondary', icon: 'pi pi-bookmark', styledClass:
+        'bg-secondary border-transparent hover:bg-primary-900 mr-2 mt-2
+        focus:bg-primary-900', &#125;" [buttonType]="'full'"><span
+          class="text-info"
+          >&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&#123; type:
+        'Success', label: 'Success', icon: 'pi pi-check', styledClass:
+        'bg-success border-transparent hover:bg-green-700 mr-2 mt-2', &#125;"
+        [buttonType]="'full'"><span class="text-info"
+          >&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&#123; type:
+        'Info', label: 'Info', icon: 'pi pi-info-circle', styledClass: 'bg-info
+        border-transparent hover:bg-cyan-400 mr-2 mt-2', &#125;"
+        [buttonType]="'full'"><span class="text-info"
+          >&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&#123; type:
+        'Warn', label: 'Warn', icon: 'pi pi-exclamation-triangle', styledClass:
+        'bg-warn border-transparent hover:bg-yellow-600 mr-2 mt-2', &#125;"
+        [buttonType]="'full'"><span class="text-info"
+          >&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&#123; type:
+        'Error', label: 'Error', icon: 'pi pi-exclamation-circle', styledClass:
+        'bg-error border-transparent hover:bg-red-400 mr-2 mt-2', &#125;"
+        [buttonType]="'full'"><span class="text-info"
+          >&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&#123; type:
+        'Disabled', label: 'Disabled', icon: 'pi pi-exclamation-circle',
+        styledClass: 'bg-gray-300 border-transparent hover:bg-gray-300
+        focus:bg-gray-300 mr-2 mt-2', disabled: true &#125;"
+        [buttonType]="'full'"><span class="text-info"
+          >&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+      </div>
+      <br />
+      <p-divider></p-divider>
+      <br />
+      <div>
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&#123; type:
+        'primary', label: 'primary', styledClass: 'mr-2 mt-2 p-button-rounded
+        bg-primary border-transparent hover:bg-blue-500', &#125;"
+        [buttonType]="'full'"&gt;<span class="text-info"
+          >&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&#123; type:
+        'secondary', label: 'secondary', styledClass: 'mr-2 mt-2
+        p-button-rounded bg-secondary border-transparent hover:bg-primary-900
+        mr-2 focus:bg-primary-900', &#125;" [buttonType]="'full'"&gt;<span
+          class="text-info"
+          >&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&#123; type:
+        'success', label: 'success', styledClass: 'mr-2 mt-2 p-button-rounded
+        bg-success border-transparent hover:bg-green-700', &#125;"
+        [buttonType]="'full'"&gt;<span class="text-info"
+          >&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&#123; type:
+        'info', label: 'info', styledClass: 'mr-2 mt-2 p-button-rounded bg-info
+        border-transparent hover:bg-cyan-400', &#125;"
+        [buttonType]="'full'"&gt;<span class="text-info"
+          >&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&#123; type:
+        'warn', label: 'warn', styledClass: 'mr-2 mt-2 p-button-rounded bg-warn
+        border-transparent hover:bg-yellow-600', &#125;"
+        [buttonType]="'full'"&gt;<span class="text-info"
+          >&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&#123; type:
+        'error', label: 'error', styledClass: 'mr-2 mt-2 p-button-rounded
+        bg-error border-transparent hover:bg-red-400', &#125;"
+        [buttonType]="'full'"&gt;<span class="text-info"
+          >&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&#123; type:
+        'Disabled', label: 'Disabled', styledClass: 'mr-2 mt-2 p-button-rounded
+        bg-gray-300 border-transparent hover:bg-gray-300 focus:bg-gray-300',
+        disabled: true &#125;" [buttonType]="'full'"&gt;<span class="text-info"
+          >&lt;/cca-buttons&gt;</span
+        >
+      </div>
+    </p-tabPanel>
+  </p-tabView>
+</div>
+
+<br />
+<p-divider></p-divider>
+<br />
+
+<div class="card">
+  <div class="flex items-center justify-center flex-wrap">
+    <strong>Bouton d'action secondaire</strong>
+  </div>
+  <p-tabView>
+    <p-tabPanel header="Demo">
+      <div class="flex items-center justify-center flex-wrap">
+        <div class="flex justify-center items-center flex-wrap">
+          <cca-buttons
+            [btnConfig]="{
+            type: 'Primary',
+            label: 'Primary',
+            styledClass:
+            'rounded border-1 border-primary mr-2 mt-2 px-3 py-2 font-medium text-primary hover:border-primary-600 hover:bg-primary-100 hover:bg-opacity-10 hover:text-primary-600',
+          }"
+            [buttonType]="'bordered-button'"
+          ></cca-buttons>
+          <cca-buttons
+            [btnConfig]="{
+            type: 'Secondary',
+            label: 'Secondary',
+            styledClass:
+            'rounded border-1 border-secondary mr-2 px-3 mt-2 py-2 font-medium text-secondary hover:border-secondary hover:bg-secondary hover:bg-opacity-10 hover:text-secondary-600',
+          }"
+            [buttonType]="'bordered-button'"
+          ></cca-buttons>
+          <cca-buttons
+            [btnConfig]="{
+            type: 'Success',
+            label: 'Success',
+            styledClass:
+            'rounded border-1 border-success mr-2 px-3 py-2 mt-2 font-medium text-success hover:border-success-600 hover:bg-success hover:bg-opacity-10 hover:text-success-600',
+          }"
+            [buttonType]="'bordered-button'"
+          ></cca-buttons>
+          <cca-buttons
+            [btnConfig]="{
+            type: 'Error',
+            label: 'Error',
+            styledClass:
+            'rounded border-1 border-error mr-2 px-3 py-2 mt-2 font-medium text-error hover:border-error-600 hover:bg-error hover:bg-opacity-10 hover:text-error-600',
+          }"
+            [buttonType]="'bordered-button'"
+          ></cca-buttons>
+          <cca-buttons
+            [btnConfig]="{
+            type: 'Warning',
+            label: 'Warning',
+            styledClass:
+            'rounded border-1 border-warn mr-2 px-3 py-2 mt-2 font-medium text-warn hover:border-warn-600 hover:bg-warn hover:bg-opacity-10 hover:text-warn-600',
+          }"
+            [buttonType]="'bordered-button'"
+          ></cca-buttons>
+          <cca-buttons
+            [btnConfig]="{
+            type: 'Info',
+            label: 'Info',
+            styledClass:
+            'rounded border-1 border-info mr-2 px-3 py-2 mt-2 font-medium text-info hover:border-info-600 hover:bg-info hover:bg-opacity-10 hover:text-info-600',
+          }"
+            [buttonType]="'bordered-button'"
+          ></cca-buttons>
+          <cca-buttons
+            [btnConfig]="{
+            type: 'Cancel',
+            label: 'Cancel',
+            styledClass:
+            'rounded border-1 border-neutral-800 mr-2 px-3 mt-2 py-2 font-medium text-neutral-800 hover:border-neutral-800 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-800',
+          }"
+            [buttonType]="'bordered-button'"
+          ></cca-buttons>
+          <cca-buttons
+            [btnConfig]="{
+              type: 'Disabled',
+              label: 'Disabled',
+              styledClass:
+                'rounded border-1 border-neutral2 mr-2 px-3 py-2 mt-2 font-medium text-neutral2 hover:border-neutral2 hover:text-neutral2 focus:border-neutral2 focus:text-neutral2',
+              disabled: true
+            }"
+            [buttonType]="'bordered-button'"
+          ></cca-buttons>
+        </div>
+      </div>
+      <br />
+      <p-divider></p-divider>
+      <br />
+      <div class="flex items-center justify-center flex-wrap">
+        <cca-buttons
+          [btnConfig]="{
+          type: 'Primary',
+          label: 'Primary',icon:'pi pi-save',
+          styledClass:
+          'rounded-full border-1 border-primary mr-2 px-3 mt-2 py-2 font-medium text-primary hover:border-primary-600 hover:bg-primary-100 hover:bg-opacity-10 hover:text-primary-600',
+        }"
+          [buttonType]="'bordered-button'"
+        ></cca-buttons>
+        <cca-buttons
+          [btnConfig]="{
+          type: 'Secondary',
+          label: 'Secondary',icon:'pi pi-bookmark',
+          styledClass:
+          'rounded-full border-1 border-secondary mr-2 px-3 mt-2  py-2 font-medium text-secondary-700 hover:border-secondary hover:bg-secondary hover:bg-opacity-10 hover:text-secondary-600',
+        }"
+          [buttonType]="'bordered-button'"
+        ></cca-buttons>
+        <cca-buttons
+          [btnConfig]="{
+          type: 'Success',
+          label: 'Success',icon:'pi pi-check',
+          styledClass:
+          'rounded-full border-1 border-success mr-2 px-3 mt-2 py-2 font-medium text-success hover:border-success-600 hover:bg-success hover:bg-opacity-10 hover:text-success-600',
+        }"
+          [buttonType]="'bordered-button'"
+        ></cca-buttons>
+        <cca-buttons
+          [btnConfig]="{
+          type: 'Error',
+          label: 'Error',icon:'pi pi-exclamation-circle',
+          styledClass:
+          'rounded-full border-1 border-error mr-2 px-3 mt-2 py-2 font-medium text-error hover:border-error-600 hover:bg-error hover:bg-opacity-10 hover:text-error-600',
+        }"
+          [buttonType]="'bordered-button'"
+        ></cca-buttons>
+        <cca-buttons
+          [btnConfig]="{
+          type: 'Warning',
+          label: 'Warning',icon:'pi pi-exclamation-triangle',
+          styledClass:
+          'rounded-full border-1 border-warn mr-2 px-3 mt-2 py-2 font-medium text-warn hover:border-warn-600 hover:bg-warn hover:bg-opacity-10 hover:text-warn-600',
+        }"
+          [buttonType]="'bordered-button'"
+        ></cca-buttons>
+        <cca-buttons
+          [btnConfig]="{
+          type: 'Info',
+          label: 'Info',icon:'pi pi-info-circle',
+          styledClass:
+          'rounded-full border-1 border-info mr-2 px-3 mt-2 py-2 font-medium text-info hover:border-info-600 hover:bg-info hover:bg-opacity-10 hover:text-info-600',
+        }"
+          [buttonType]="'bordered-button'"
+        ></cca-buttons>
+        <cca-buttons
+          [btnConfig]="{
+          type: 'Cancel',
+          label: 'Cancel',icon:'pi pi-pi-times-circle',
+          styledClass:
+          'rounded-full border-1 border-neutral-800 mr-2 mt-2 px-3 py-2 font-medium text-neutral-800 hover:border-neutral-800 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-800',
+        }"
+          [buttonType]="'bordered-button'"
+        ></cca-buttons>
+        <cca-buttons
+          [btnConfig]="{
+            type: 'Disabled',
+            label: 'Disabled',
+            icon: 'pi pi-bookmark-fill',
+            styledClass:
+              'rounded-full border-1 border-neutral2 mr-2 px-3 mt-2 py-2 font-medium text-neutral2 hover:border-neutral2 hover:bg-neutral hover:text-neutral2 focus:border-neutral2 focus:text-neutral2',
+            disabled: true
+          }"
+          [buttonType]="'bordered-button'"
+        ></cca-buttons>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="HTML">
+      <div>
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&lbrace;
+        type: 'Primary', label: 'Primary', styledClass: 'rounded border-1
+        border-primary mr-2 mt-2 px-3 py-2 font-medium text-primary
+        hover:border-primary-600 hover:bg-primary-100 hover:bg-opacity-10
+        hover:text-primary-600', &rbrace;" [buttonType]="'bordered-button'"<span
+          class="text-info"
+          >&gt;&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&lbrace;
+        type: 'Secondary', label: 'Secondary', styledClass: 'rounded border-1
+        border-secondary mr-2 px-3 mt-2 py-2 font-medium text-secondary
+        hover:border-secondary hover:bg-secondary hover:bg-opacity-10
+        hover:text-secondary-600', &rbrace;"
+        [buttonType]="'bordered-button'"<span class="text-info"
+          >&gt;&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&lbrace;
+        type: 'Success', label: 'Success', styledClass: 'rounded border-1
+        border-success mr-2 px-3 py-2 mt-2 font-medium text-success
+        hover:border-success-600 hover:bg-success hover:bg-opacity-10
+        hover:text-success-600', &rbrace;" [buttonType]="'bordered-button'"<span
+          class="text-info"
+          >&gt;&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&lbrace;
+        type: 'Error', label: 'Error', styledClass: 'rounded border-1
+        border-error mr-2 px-3 py-2 mt-2 font-medium text-error
+        hover:border-error-600 hover:bg-error hover:bg-opacity-10
+        hover:text-error-600', &rbrace;" [buttonType]="'bordered-button'"<span
+          class="text-info"
+          >&gt;&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&lbrace;
+        type: 'Warning', label: 'Warning', styledClass: 'rounded border-1
+        border-warn mr-2 px-3 py-2 mt-2 font-medium text-warn
+        hover:border-warn-600 hover:bg-warn hover:bg-opacity-10
+        hover:text-warn-600', &rbrace;" [buttonType]="'bordered-button'"<span
+          class="text-info"
+          >&gt;&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&lbrace;
+        type: 'Info', label: 'Info', styledClass: 'rounded border-1 border-info
+        mr-2 px-3 py-2 mt-2 font-medium text-info hover:border-info-600
+        hover:bg-info hover:bg-opacity-10 hover:text-info-600', &rbrace;"
+        [buttonType]="'bordered-button'"<span class="text-info"
+          >&gt;&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&lbrace;
+        type: 'Cancel', label: 'Cancel', styledClass: 'rounded border-1
+        border-neutral-800 mr-2 px-3 mt-2 py-2 font-medium text-neutral-800
+        hover:border-neutral-800 hover:bg-neutral-500 hover:bg-opacity-10
+        hover:text-neutral-800', &rbrace;" [buttonType]="'bordered-button'"<span
+          class="text-info"
+          >&gt;&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&lbrace;
+        type: 'Disabled', label: 'Disabled', styledClass: 'rounded border-1
+        border-neutral2 mr-2 px-3 py-2 mt-2 font-medium text-neutral2
+        hover:border-neutral2 hover:text-neutral2 focus:border-neutral2
+        focus:text-neutral2', disabled: true &rbrace;"
+        [buttonType]="'bordered-button'"<span class="text-info"
+          >&gt;&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+      </div>
+
+      <br />
+      <p-divider></p-divider>
+      <br />
+      <div>
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&lbrace;
+        type: 'Primary', label: 'Primary', icon: 'pi pi-save', styledClass:
+        'rounded-full border-1 border-primary mr-2 px-3 mt-2 py-2 font-medium
+        text-primary hover:border-primary-600 hover:bg-primary-100
+        hover:bg-opacity-10 hover:text-primary-600', &rbrace;"
+        [buttonType]="'bordered-button'"<span class="text-info"
+          >&gt;&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&lbrace;
+        type: 'Secondary', label: 'Secondary', icon: 'pi pi-bookmark',
+        styledClass: 'rounded-full border-1 border-secondary mr-2 px-3 mt-2 py-2
+        font-medium text-secondary-700 hover:border-secondary hover:bg-secondary
+        hover:bg-opacity-10 hover:text-secondary-600', &rbrace;"
+        [buttonType]="'bordered-button'"<span class="text-info"
+          >&gt;&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&lbrace;
+        type: 'Success', label: 'Success', icon: 'pi pi-check', styledClass:
+        'rounded-full border-1 border-success mr-2 px-3 mt-2 py-2 font-medium
+        text-success hover:border-success-600 hover:bg-success
+        hover:bg-opacity-10 hover:text-success-600', &rbrace;"
+        [buttonType]="'bordered-button'"<span class="text-info"
+          >&gt;&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&lbrace;
+        type: 'Error', label: 'Error', icon: 'pi pi-exclamation-circle',
+        styledClass: 'rounded-full border-1 border-error mr-2 px-3 mt-2 py-2
+        font-medium text-error hover:border-error-600 hover:bg-error
+        hover.bg-opacity-10 hover:text-error-600', &rbrace;"
+        [buttonType]="'bordered-button'"<span class="text-info"
+          >&gt;&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&lbrace;
+        type: 'Warning', label: 'Warning', icon: 'pi pi-exclamation-triangle',
+        styledClass: 'rounded-full border-1 border-warn mr-2 px-3 mt-2 py-2
+        font-medium text-warn hover:border-warn-600 hover.bg-warn
+        hover.bg-opacity-10 hover:text-warn-600', &rbrace;"
+        [buttonType]="'bordered-button'"<span class="text-info"
+          >&gt;&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&lbrace;
+        type: 'Info', label: 'Info', icon: 'pi pi-info-circle', styledClass:
+        'rounded-full border-1 border-info mr-2 px-3 mt-2 py-2 font-medium
+        text-info hover:border-info-600 hover.bg-info hover.bg-opacity-10
+        hover:text-info-600', &rbrace;" [buttonType]="'bordered-button'"<span
+          class="text-info"
+          >&gt;&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&lbrace;
+        type: 'Cancel', label: 'Cancel', icon: 'pi pi-pi-times-circle',
+        styledClass: 'rounded-full border-1 border-neutral-800 mr-2 mt-2 px-3
+        py-2 font-medium text-neutral-800 hover:border-neutral-800
+        hover.bg-neutral-500 hover.bg-opacity-10 hover:text-neutral-800',
+        &rbrace;" [buttonType]="'bordered-button'"<span class="text-info"
+          >&gt;&lt;/cca-buttons&gt;</span
+        >
+        <br /><br />
+        <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&lbrace;
+        type: 'Disabled', label: 'Disabled', icon: 'pi pi-bookmark-fill',
+        styledClass: 'rounded-full border-1 border-neutral2 mr-2 px-3 mt-2 py-2
+        font-medium text-neutral2 hover:border-neutral2 hover.bg-neutral
+        hover:text-neutral2 focus:border-neutral2 focus:text-neutral2',
+        disabled: true &rbrace;" [buttonType]="'bordered-button'"<span
+          class="text-info"
+          >&gt;&lt;/cca-buttons&gt;</span
+        >
+      </div>
+    </p-tabPanel>
+  </p-tabView>
+</div>
+<br />
+<p-divider></p-divider>
+<br />
+
+<div class="card">
+  <div class="flex items-center justify-center flex-wrap">
+    <strong>Bouton texte</strong>
+  </div>
+  <p-tabView>
+    <p-tabPanel header="Demo">
+      <cca-buttons [buttonType]="'text-button'"></cca-buttons>
+    </p-tabPanel>
+    <p-tabPanel header="HTML">
+      <span class="text-info">&lt;cca-buttons </span>
+      [buttonType]="'text-button'"<span class="text-info"
+        >&gt;&lt;/cca-buttons&gt;
+      </span>
+    </p-tabPanel>
+  </p-tabView>
+</div>
+<br />
+<p-divider></p-divider>
+<br />
+<div class="card">
+  <div class="flex items-center justify-center flex-wrap">
+    <strong>Bouton raised texte</strong>
+  </div>
+  <p-tabView>
+    <p-tabPanel header="Demo">
+      <cca-buttons [buttonType]="'raised text'"></cca-buttons>
+    </p-tabPanel>
+    <p-tabPanel header="HTML">
+      <span class="text-info">&lt;cca-buttons </span>
+      [buttonType]="'raised text'"<span class="text-info"
+        >&gt;&lt;/cca-buttons&gt;
+      </span>
+    </p-tabPanel>
+  </p-tabView>
+</div>
+<br />
+<p-divider></p-divider>
+<br />
+<div class="card">
+  <div class="flex items-center justify-center flex-wrap">
+    <strong>Loading Button</strong>
+  </div>
+  <p-tabView>
+    <p-tabPanel header="Demo">
+      <div class="flex items-center justify-center flex-wrap">
+        <cca-buttons [loading_button]="true"></cca-buttons>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="HTML">
+      <span class="text-info">&lt;cca-buttons </span>
+      [loading_button]="true"<span class="text-info"
+        >&gt;&lt;/cca-buttons&gt;
+      </span>
+    </p-tabPanel>
+  </p-tabView>
+</div>

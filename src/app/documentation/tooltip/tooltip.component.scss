@@ -1,0 +1,15 @@
+::ng-deep {
+  .icon-btn .p-button.p-button-icon {
+    font-size: 2rem;
+    // }
+  }
+  // .pi {
+  //   // font-size: 2rem;
+  // }
+  .customtooltip.p-tooltip .p-tooltip-text {
+    @apply bg-info text-white relative top-36;
+    max-width: 1000px;
+    width: 600px;
+    text-align: center;
+  }
+}

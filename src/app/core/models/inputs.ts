@@ -1,0 +1,19 @@
+export class IDataType {
+  placeholder?: string = '';
+  type?: string = '';
+  width?: string = '';
+  heigth?: string = '';
+  size: number = 0;
+  volume?: string = '';
+  value: string = '';
+  icon?: string = '';
+  mask?: string = '';
+  posIcon?: string = 'left';
+  slotChar?: string = '';
+  legend?: string = 'Search';
+  checked?: boolean = false;
+  disabled?: boolean = false;
+  rows: number = 0;
+  autoResize: boolean = false;
+  valid?: boolean = true;
+}

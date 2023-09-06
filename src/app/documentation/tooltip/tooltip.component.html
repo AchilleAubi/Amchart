@@ -1,0 +1,53 @@
+<div class="flex justify-center items-center flex-wrap">
+  <cca-buttons
+    pTooltip="tooltip right"
+    [btnConfig]="{
+        type: 'Primary',
+        label: 'tooltip right',
+        styledClass:
+          'mr-2 mt-2 bg-primary rounded border-transparent hover:bg-blue-500',
+      }"
+    [buttonType]="'full'"
+  ></cca-buttons>
+  <cca-buttons
+    pTooltip="tooltip left"
+    tooltipPosition="left"
+    [btnConfig]="{
+        type: 'Secondary',
+        label: 'tooltip left',
+        styledClass:
+          'bg-secondary border-transparent hover:bg-primary-900 mr-2 mt-2 focus:bg-primary-900',
+      }"
+    [buttonType]="'full'"
+  ></cca-buttons>
+  <cca-buttons
+    pTooltip="tooltip top"
+    tooltipPosition="top"
+    [btnConfig]="{
+        type: 'Success',
+        label: 'tooltip top',
+        styledClass:
+          'bg-success border-transparent hover:bg-green-700 mr-2 mt-2',
+      }"
+    [buttonType]="'full'"
+  ></cca-buttons>
+  <cca-buttons
+    pTooltip="tooltip bottom"
+    tooltipPosition="bottom"
+    [btnConfig]="{
+        type: 'Info',
+        label: 'tooltip bottom',
+        styledClass: 'bg-info border-transparent hover:bg-cyan-400 mr-2 mt-2',
+      }"
+    [buttonType]="'full'"
+  ></cca-buttons>
+</div>
+<p-divider></p-divider>
+<i
+  class="pi pi-ellipsis-v text-2xl"
+  [pTooltip]="tooltipContent"
+  tooltipPosition="right"
+  tooltipEvent="hover"
+  tooltipStyleClass="customtooltip"
+>
+</i>

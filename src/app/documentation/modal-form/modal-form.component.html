@@ -1,0 +1,110 @@
+<div class="mt-2 ml-2 flex flex-wrap items-center w-full">
+  <div>
+    <div>
+      <label for="searchInput" class="mb-2"><strong>First name</strong></label>
+    </div>
+    <div class="m-2 h-10">
+      <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        placeholder="firstName ..."
+        class="peer h-10 border p-2 border-gray-300 text-gray-900 rounded-lg focus-visible:outline-none focus:ring-blue-500 hover:border-blue-500 focus: focus:border-blue-500"
+      />
+    </div>
+  </div>
+  <div>
+    <div>
+      <label for="searchInput" class="mb-2"><strong>Last name</strong></label>
+    </div>
+    <div class="m-2 h-10">
+      <input
+        type="text"
+        name="lastName"
+        id="lastName"
+        placeholder="lastName ..."
+        class="peer h-10 border p-2 border-gray-300 text-gray-900 rounded-lg focus-visible:outline-none focus:ring-blue-500 hover:border-blue-500 focus: focus:border-blue-500"
+      />
+    </div>
+  </div>
+  <div>
+    <div>
+      <label for="searchInput" class="mb-2"><strong>Company</strong></label>
+    </div>
+    <div class="m-2 h-10">
+      <input
+        type="text"
+        name="company"
+        placeholder="company ..."
+        id="company"
+        class="peer h-10 border p-2 border-gray-300 text-gray-900 rounded-lg focus-visible:outline-none focus:ring-blue-500 hover:border-blue-500 focus: focus:border-blue-500"
+      />
+    </div>
+  </div>
+  <div>
+    <div class="mb-1">
+      <label for="searchInput"><strong>Phone number</strong></label>
+    </div>
+    <div class="m-2 h-10">
+      <input
+        type="text"
+        name="phone"
+        id="phone"
+        placeholder="phone ..."
+        class="peer h-10 border p-2 border-gray-300 text-gray-900 rounded-lg focus-visible:outline-none focus:ring-blue-500 hover:border-blue-500 focus: focus:border-blue-500"
+      />
+    </div>
+  </div>
+  <div>
+    <div>
+      <label for="searchInput" class="mb-2"><strong>Website URL</strong></label>
+    </div>
+    <div class="m-2 h-10">
+      <input
+        type="text"
+        name="website"
+        placeholder="website ..."
+        id="website"
+        class="peer h-10 border p-2 border-gray-300 text-gray-900 rounded-lg focus-visible:outline-none focus:ring-blue-500 hover:border-blue-500 focus: focus:border-blue-500"
+      />
+    </div>
+  </div>
+  <div>
+    <div>
+      <label for="searchInput" class="mb-2"
+        ><strong>Email address</strong></label
+      >
+    </div>
+    <div class="m-2 h-10">
+      <input
+        type="text"
+        name="email"
+        id="email"
+        placeholder="email ..."
+        class="peer h-10 border p-2 border-gray-300 text-gray-900 rounded-lg focus-visible:outline-none focus:ring-blue-500 hover:border-blue-500 focus: focus:border-blue-500"
+      />
+    </div>
+  </div>
+</div>
+<p-divider></p-divider>
+<div class="flex items-center justify-content-end flex-wrap">
+  <cca-buttons
+    [btnConfig]="{
+        type: 'Cancel',
+        label: 'Cancel', 
+        styledClass:
+        'rounded border-1 border-neutral-800 mr-2 px-3 mt-2 py-2 font-medium text-neutral-800 hover:border-neutral-800 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-800',
+      }"
+    [buttonType]="'bordered-button'"
+    (actionBtn)="closeDialog('Cancel')"
+  ></cca-buttons>
+  <cca-buttons
+    [btnConfig]="{
+      type: 'Secondary',
+      label: 'Save changes',
+      styledClass: 'bg-secondary border-transparent hover:bg-primary-900 mr-2 mt-2 py-[0.45rem] focus:bg-primary-900',
+    }"
+    [buttonType]="'full'"
+    (actionBtn)="closeDialog('Save changes')"
+  ></cca-buttons>
+</div>

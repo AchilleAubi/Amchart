@@ -1,0 +1,18 @@
+<p-panel [header]="header" [toggleable]="toggleable" *ngIf="type === 'basic'" [collapseIcon]="'pi pi-chevron-down'"
+  [expandIcon]="'pi pi-chevron-up'">
+  <p>
+    {{content}}
+  </p>
+</p-panel>
+
+<p-panel *ngIf="type === 'template'">
+  <ng-template pTemplate="header">
+    <ng-content select="[header]"></ng-content>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <ng-content select="[footer]"></ng-content>
+  </ng-template>
+  <ng-template pTemplate="body">
+    <ng-content></ng-content>
+  </ng-template>
+</p-panel>

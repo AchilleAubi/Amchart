@@ -1,0 +1,377 @@
+<div class="card">
+  <div class="flex items-center justify-center flex-wrap"><strong>Input</strong></div>
+  <p-tabView>
+    <p-tabPanel header="Demo">
+      <div>
+        <div>
+          <label for="searchInput" class="mb-4"><strong>Input Search</strong></label>
+        </div>
+        <div class="mt-4">
+          <cca-input
+            [dataParams]="{ type: 'input-search', value: '', legend: 'Search', width: 'w-1/2', size: 0, autoResize: false, rows:0}"></cca-input>
+        </div>
+      </div>
+      <br>
+      <p-divider></p-divider>
+      <br>
+      <div>
+        <div>
+          <label for="searchInput" class="mb-4"><strong>InputSwitch</strong></label>
+        </div>
+        <div class="mt-4">
+          <cca-input [dataParams]="{ type: 'input-switch', value:'', checked: true, size: 0, autoResize: false, rows:0}"
+            class="px-4"></cca-input>
+          <cca-input
+            [dataParams]="{ type: 'input-switch', value:'', checked: false, size: 0, autoResize: false, rows:0}"></cca-input>
+        </div>
+      </div>
+      <br>
+      <p-divider></p-divider>
+      <br>
+      <div>
+        <div>
+          <label for="searchInput" class="mb-4"><strong>InputMask</strong></label>
+        </div>
+        <div class="mt-4 flex flex-wrap">
+          <div class="mb-2 mr-2">
+            <label for="">Tax ID :</label>
+            <cca-input
+              [dataParams]="{ type: 'input-mask', value: '', size: 14, mask: '99-999999', placeholder: '99-999999', autoResize: false, rows:0, valid :false }"
+              class="px-4"></cca-input>
+          </div>
+          <div class="mb-2 mr-2">
+            <label for="">SSN :</label>
+            <cca-input
+              [dataParams]="{ type: 'input-mask', value: '', size: 14, mask: '999-99-9999', placeholder: '999-99-9999', autoResize: false, rows:0 }"
+              class="px-4"></cca-input>
+          </div>
+          <div class="mb-2 mr-2">
+            <label for="">Phone :</label>
+            <cca-input
+              [dataParams]="{ type: 'input-mask', value: '', size: 14, mask: '(999) 999-9999', placeholder: '(999) 999-9999', autoResize: false, rows:0 }"
+              class="px-4"></cca-input>
+          </div>
+          <div class="mb-2 mr-2">
+            <label for="">Product Key :</label>
+            <cca-input
+              [dataParams]="{ type: 'input-mask', value: '', size: 14, mask: 'a*-999-a999', placeholder: 'a*-999-a999', autoResize: false, rows:0 }"
+              class="px-4"></cca-input>
+          </div>
+          <div class="mb-2 mr-2">
+            <label for="">Date :</label>
+            <cca-input
+              [dataParams]="{ type: 'input-mask', value: '', size: 14, mask: '99/99/9999', placeholder: 'mm/dd/yyyy', slotChar:'mm/dd/yyyy', autoResize: false, rows:0 }"
+              class="px-4"></cca-input>
+          </div>
+        </div>
+      </div>
+      <br>
+      <p-divider></p-divider>
+      <br>
+      <div>
+        <div>
+          <label for="searchInput" class="mb-4"><strong>Input Basic</strong></label>
+        </div>
+        <div class="mt-4">
+          <cca-input
+            [dataParams]="{ type: 'input-basic', value:'', size: 50, placeholder:'placeholder', autoResize: false, disabled:false, rows:0 }"></cca-input>
+        </div>
+      </div>
+      <br>
+      <p-divider></p-divider>
+      <br>
+      <div>
+        <div>
+          <label for="searchInput" class="mb-4"><strong>Input with icon</strong></label>
+        </div>
+        <div class="mt-4">
+          <label for="">Right : </label>
+          <cca-input
+            [dataParams]="{ type: 'input-with-icon', value:'' , icon: 'pi pi-search', size: 50, placeholder: 'placeholder' ,disabled:false, posIcon: 'right', autoResize: false, rows:0 }"></cca-input>
+        </div>
+        <div class="mt-4">
+          <label for="">Lefy : </label>
+          <cca-input
+            [dataParams]="{ type: 'input-with-icon', value:'' , icon: 'pi pi-search', size: 50, placeholder: 'placeholder' ,disabled:false, posIcon: 'left', autoResize: false, rows:0 }"></cca-input>
+        </div>
+      </div>
+      <br>
+      <p-divider></p-divider>
+      <br>
+      <div>
+        <div>
+          <label for="searchInput" class="mb-4"><strong>Input float label</strong></label>
+        </div>
+        <div class="mt-4">
+          <cca-input
+            [dataParams]="{ type: 'input-float-label', value: '', size: 50, legend:'Float label', autoResize: false,disabled:false, rows:0 }"></cca-input>
+        </div>
+      </div>
+      <br>
+      <p-divider></p-divider>
+      <br>
+      <div>
+        <div>
+          <label for="searchInput" class="mb-4"><strong>Input Disabled</strong></label>
+        </div>
+        <div class="mt-4">
+          <cca-input
+            [dataParams]="{ type: 'input-basic', value: '', disabled: true, size: 50, placeholder:'placeholder', autoResize: false, rows:0 }"></cca-input>
+        </div>
+      </div>
+      <br>
+      <p-divider></p-divider>
+      <br>
+      <div>
+        <div>
+          <label for="searchInput" class="mb-4"><strong>Input Invalid</strong></label>
+        </div>
+        <div class="mt-4">
+          <cca-input [dataParams]="{ type: 'invalid', value: '', size: 50, autoResize: false, rows:0 }"></cca-input>
+        </div>
+      </div>
+      <br>
+      <p-divider></p-divider>
+      <br>
+      <div>
+        <div>
+          <label for="searchInput" class="mb-4"><strong>Input textarea</strong></label>
+        </div>
+        <div class="mt-4">
+          <label>normal</label>
+        </div>
+        <div class="mt-2">
+          <cca-input
+            [dataParams]="{ type: 'input-textarea', value: '', disabled: false, width: 'w-1/2', placeholder:'placeholder', size: 0, autoResize: false, rows:5 }"></cca-input>
+        </div>
+        <div class="mt-4">
+          <label>autoResize</label>
+        </div>
+        <div class="mt-2">
+          <cca-input
+            [dataParams]="{ type: 'input-textarea', value: '',disabled:false, autoResize: true, width: 'w-1/2', placeholder:'placeholder', size: 0, rows:2 }"></cca-input>
+        </div>
+        <div class="mt-4">
+          <label>Float label normal</label>
+        </div>
+        <div class="mt-4">
+          <cca-input
+            [dataParams]="{ type: 'input-textarea-float-label', legend:'float label', value : '', width: 'w-1/2', autoResize: false, size: 0, rows:5 }"></cca-input>
+        </div>
+        <div class="mt-4">
+          <label>Float label autoResize</label>
+        </div>
+        <div class="mt-4">
+          <cca-input
+            [dataParams]="{ type: 'input-textarea-float-label', legend:'float label', value : '', width: 'w-1/2', size: 0, autoResize: true, rows:2 }"></cca-input>
+        </div>
+        <div class="mt-4">
+          <label>disabled</label>
+        </div>
+        <div class="mt-2">
+          <cca-input
+            [dataParams]="{ type: 'input-textarea', value : '', size: 0, disabled: true, rows:5, placeholder:'placeholder', autoResize: false }"></cca-input>
+        </div>
+      </div>
+      <br>
+      <p-divider></p-divider>
+      <br>
+      <div>
+        <div>
+          <label for="searchInput" class="mb-4"><strong>Input size</strong></label>
+        </div>
+        <div class="mt-4">
+          <label>Small</label>
+        </div>
+        <div class="mt-2">
+          <cca-input
+            [dataParams]="{ type: 'input-basic', value : '', volume : 'p-inputtext-sm', disabled: false, size: 50, placeholder:'placeholder', autoResize: false, rows:0 }"></cca-input>
+        </div>
+        <div class="mt-4">
+          <label>Normal</label>
+        </div>
+        <div class="mt-2">
+          <cca-input
+            [dataParams]="{ type: 'input-basic', value : '', volume : 'p-inputtext-sm', disabled: false, size: 50, placeholder:'placeholder', autoResize: false, rows:0 }"></cca-input>
+        </div>
+        <div class="mt-4">
+          <label>Large</label>
+        </div>
+        <div class="mt-2">
+          <cca-input
+            [dataParams]="{ type: 'input-basic', value : '', volume : 'p-inputtext-lg', disabled: false, size: 50, placeholder:'placeholder', autoResize: false, rows:0 }"></cca-input>
+        </div>
+      </div>
+      <br>
+      <p-divider></p-divider>
+      <br>
+      <div>
+        <div>
+          <label for="searchInput" class="mb-4"><strong>Input required field</strong></label>
+        </div>
+        <div class="mt-4">
+          <label>Basic</label>
+        </div>
+        <div class="mt-2">
+          <cca-input
+            [dataParams]="{ type: 'input-required-text', value : '', legend: 'Please enter your name', width: 'w-1/2', size: 0, autoResize: false, rows:0 }"></cca-input>
+        </div>
+        <div class="mt-4">
+          <label>Email</label>
+        </div>
+        <div class="mt-2">
+          <cca-input
+            [dataParams]="{ type: 'input-required-email', value : '', legend: 'Please enter a valid email address', width: 'w-1/2', size: 0, autoResize: false, rows:0 }"></cca-input>
+        </div>
+        <div class="mt-4">
+          <label>Textarea</label>
+        </div>
+        <div class="mt-2">
+          <cca-input
+            [dataParams]="{ type: 'input-required-textarea', value : '', legend: 'This field cannot be empty', width: 'w-1/2', size: 0, autoResize: false, rows:5 }"></cca-input>
+        </div>
+      </div>
+      <br>
+      <p-divider></p-divider>
+    </p-tabPanel>
+    <p-tabPanel header="HTML">
+      <pre>
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-search', value: '', legend: 'Search', width: 'w-1/2',
+           size: 0, autoResize: false, rows: 0 &#125;"
+         <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+      </pre>
+      <br>
+      <pre>
+        <span class="text-info">&lt;cca-input</span> [dataParams]="&#123; type: 'input-switch', 
+        value:'', checked: true, size: 0, autoResize: false, rows:0 &#125;" class="px-4" 
+        <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+        <span class="text-info">&lt;cca-input</span> [dataParams]="&#123; type: 'input-switch', 
+        value:'', checked: false, size: 0, autoResize: false, rows:0 &#125;" 
+        <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+      </pre>
+      <br>
+      <pre>
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-mask', value: '', size: 14, mask: '99-999999',
+           placeholder: '99-999999', autoResize: false, rows: 0, valid: false &#125;"
+          class="px-4" <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-mask', value: '', size: 14, mask: '999-99-9999', 
+          placeholder: '999-99-9999', autoResize: false, rows: 0 &#125;"
+          class="px-4" <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-mask', value: '', size: 14, mask: '(999) 999-9999', 
+          placeholder: '(999) 999-9999', autoResize: false, rows: 0 &#125;"
+          class="px-4" <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-mask', value: '', size: 14, mask: 'a*-999-a999', 
+          placeholder: 'a*-999-a999', autoResize: false, rows: 0 &#125;"
+          class="px-4" <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-mask', value: '', size: 14, mask: '99/99/9999', 
+          placeholder: 'mm/dd/yyyy', slotChar: 'mm/dd/yyyy', autoResize: false, rows: 0 &#125;"
+          class="px-4" <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+      </pre>
+      <br>
+      <pre>
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-basic', value: '', size: 50, placeholder: 'placeholder', 
+          autoResize: false, disabled: false, rows: 0 &#125;"
+         <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+      </pre>
+      <br>
+      <pre>
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-with-icon', value: '', icon: 'pi pi-search', size: 50, 
+          placeholder: 'placeholder', disabled: false, posIcon: 'right', autoResize: false, rows: 0 &#125;"
+         <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-with-icon', value: '', icon: 'pi pi-search', size: 50, 
+          placeholder: 'placeholder', disabled: false, posIcon: 'left', autoResize: false, rows: 0 &#125;"
+         <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+      </pre>
+      <br>
+      <pre>
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-float-label', value: '', size: 50, legend: 'Float label', 
+          autoResize: false, disabled: false, rows: 0 &#125;"
+         <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+      </pre>
+      <br>
+      <pre>
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-basic', value: '', disabled: true, size: 50, 
+          placeholder: 'placeholder', autoResize: false, rows: 0 &#125;"
+         <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+      </pre>
+      <br>
+      <pre>
+        <span class="text-info">&lt;cca-input</span> [dataParams]="&#123; type: 'invalid', 
+        value: '', size: 50, autoResize: false, rows: 0 &#125;" <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+      </pre>
+      <br>
+      <pre>
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-textarea', value: '', disabled: false, width: 'w-1/2', 
+          placeholder: 'placeholder', size: 0, autoResize: false, rows: 5 &#125;"
+         <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+      
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-textarea', value: '', disabled: false, autoResize: true, 
+          width: 'w-1/2', placeholder: 'placeholder', size: 0, rows: 2 &#125;"
+         <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+      
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-textarea-float-label', legend: 'float label', value: '', 
+          width: 'w-1/2', autoResize: false, size: 0, rows: 5 &#125;"
+         <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+      
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-textarea-float-label', legend: 'float label', value: '', 
+          width: 'w-1/2', size: 0, autoResize: true, rows: 2 &#125;"
+         <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+      
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-textarea', value: '', size: 0, disabled: true, rows: 5, 
+          placeholder: 'placeholder', autoResize: false &#125;"
+         <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+      </pre>
+      <br>
+      <pre>
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-basic', value: '', volume: 'p-inputtext-sm', disabled: false, 
+          size: 50, placeholder: 'placeholder', autoResize: false, rows: 0 &#125;"
+         <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+      
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-basic', value: '', volume: 'p-inputtext-sm', disabled: false, 
+          size: 50, placeholder: 'placeholder', autoResize: false, rows: 0 &#125;"
+         <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+      
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-basic', value: '', volume: 'p-inputtext-lg', disabled: false, 
+          size: 50, placeholder: 'placeholder', autoResize: false, rows: 0 &#125;"
+         <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+      </pre>
+      <br>
+      <pre>
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-required-text', value: '', legend: 'Please enter your name',
+           width: 'w-1/2', size: 0, autoResize: false, rows: 0 &#125;"
+         <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+      
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-required-email', value: '', legend: 'Please enter a valid email address', 
+          width: 'w-1/2', size: 0, autoResize: false, rows: 0 &#125;"
+         <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+      
+        <span class="text-info">&lt;cca-input</span>
+          [dataParams]="&#123; type: 'input-required-textarea', value: '', legend: 'This field cannot be empty', 
+          width: 'w-1/2', size: 0, autoResize: false, rows: 5 &#125;"
+         <span class="text-info">&gt;&lt;/cca-input&gt;</span>
+      </pre>
+
+    </p-tabPanel>
+  </p-tabView>
+</div>

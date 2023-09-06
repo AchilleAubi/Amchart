@@ -1,0 +1,13 @@
+<div class="col-span-10 mx-auto pt-2" *ngIf="myPos">
+    <div>
+        <p-tabView (onChange)="changeTab($event)">
+            <p-tabPanel header="Map">
+                <ng-template pTemplate="header">
+                    <i class="pi pi-map mr-2"></i> Map
+                </ng-template>
+                <div id="map" style="height: 70vh; width: 100%">
+                </div>
+            </p-tabPanel>
+        </p-tabView>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div>
+    <label for="paginator">pagination native modèle</label>
+    <cca-paginator id="paginator" [currentPage]="currentPage1" [totalPages]="totalPages1" [model]="'native'"
+        (pageChange)="handlePageChange1($event)"></cca-paginator>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div>
+    <label for="paginator">pagination primeng modèle</label>
+    <cca-paginator id="paginator" [model]="'primeng'"
+        [Data]="{ rows : 10, first : 0, page : 120, rowsPerPageOptions : [10, 20, 30] }"></cca-paginator>
+</div>

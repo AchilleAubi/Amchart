@@ -1,0 +1,6 @@
+<p-overlayPanel #op>
+  <ng-template pTemplate="content">
+    <ng-content></ng-content>
+  </ng-template>
+</p-overlayPanel>
+<i class="{{icon}}" (click)="op.toggle($event)"></i>

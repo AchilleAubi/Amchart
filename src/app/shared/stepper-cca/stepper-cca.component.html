@@ -1,0 +1,57 @@
+<p-steps
+  *ngIf="type === 'basic'"
+  [model]="items"
+  [readonly]="false"
+  [activeIndex]="activeIndex"
+  (activeIndexChange)="onActiveIndexChange($event)"
+  (click)="stepsAction($event)"
+></p-steps>
+
+<div class="card" *ngIf="type === 'steps-button'">
+  <p-steps
+    [model]="items"
+    [readonly]="false"
+    [activeIndex]="activeIndex"
+    (click)="stepsAction($event)"
+  ></p-steps>
+  <div class="flex align-items-center">
+    <cca-buttons
+      *ngIf="activeIndex > minItems"
+      (click)="updateIndex(false)"
+      [btnConfig]="{
+    type: 'Secondary',
+    label: 'Previous',
+    styledClass:
+    'rounded border-1 border-secondary mr-5 px-3 mt-2 py-2 font-medium text-secondary hover:border-secondary hover:bg-secondary hover:bg-opacity-10 hover:text-secondary-600',
+    }"
+      [buttonType]="'bordered-button'"
+    ></cca-buttons>
+
+    <button
+      disabled
+      *ngIf="activeIndex === minItems"
+      class="rounded border-1 border-gray-400 mr-5 px-3 mt-2 py-2"
+    >
+      Previous
+    </button>
+
+    <cca-buttons
+      *ngIf="activeIndex < maxItems"
+      (click)="updateIndex(true)"
+      [btnConfig]="{
+    type: 'Secondary',
+    label: 'Next',
+    styledClass:
+    'rounded border-1 border-secondary ml-2 px-3 mt-2 py-2 font-medium text-secondary hover:border-secondary hover:bg-secondary hover:bg-opacity-10 hover:text-secondary-600',
+    }"
+      [buttonType]="'bordered-button'"
+    ></cca-buttons>
+
+    <button
+      *ngIf="activeIndex === maxItems"
+      class="rounded border-1 border-secondary ml-2 px-3 mt-2 py-2 font-medium text-secondary hover:border-secondary hover:bg-secondary hover:bg-opacity-10 hover:text-secondary-600"
+    >
+      Confirm
+    </button>
+  </div>
+</div>

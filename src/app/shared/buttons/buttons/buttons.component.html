@@ -1,0 +1,202 @@
+<!-- Boutons d'action principale -->
+<!-- <div *ngIf="buttonType == 'full'">
+  <ng-container [ngSwitch]="type">
+    <p-button
+      *ngSwitchCase="'primary'"
+      label="Primary"
+      icon="pi pi-save"
+      class="no-border"
+      iconPos="right"
+      [styleClass]="styledClass"
+      [disabled]="disabled"
+    ></p-button>
+    <p-button
+      *ngSwitchCase="'secondary'"
+      label="Secondary"
+      [styleClass]="styledClass"
+      class="no-border"
+      icon="pi pi-bookmark"
+      iconPos="right"
+      [disabled]="disabled"
+    >
+    </p-button>
+    <p-button
+      *ngSwitchCase="'success'"
+      label="Success"
+      [styleClass]="styledClass"
+      class="no-border"
+      icon="pi pi-check"
+      iconPos="right"
+      [disabled]="disabled"
+    >
+    </p-button>
+    <p-button
+      *ngSwitchCase="'info'"
+      label="Info"
+      [styleClass]="styledClass"
+      class="no-border"
+      icon="pi pi-info-circle"
+      iconPos="right"
+      [disabled]="disabled"
+    >
+    </p-button>
+    <p-button
+      *ngSwitchCase="'warn'"
+      label="Warning"
+      [styleClass]="styledClass"
+      class="no-border"
+      icon="pi pi-exclamation-triangle"
+      iconPos="right"
+      [disabled]="disabled"
+    >
+    </p-button>
+    <p-button
+      *ngSwitchCase="'error'"
+      label="Error"
+      [styleClass]="styledClass"
+      class="no-border"
+      icon="pi pi-exclamation-circle"
+      iconPos="right"
+      [disabled]="disabled"
+    >
+    </p-button>
+    <p-button
+      *ngSwitchCase="'Disabled'"
+      label="Disabled"
+      [styleClass]="styledClass"
+      class="no-border"
+      icon="pi pi-exclamation-circle"
+      iconPos="right"
+      [disabled]="disabled"
+    >
+    </p-button>
+  </ng-container>
+</div> -->
+<ng-container *ngIf="buttonType == 'full'">
+  <p-button
+    [label]="btnConfig.label"
+    [icon]="btnConfig.icon ? btnConfig.icon : ''"
+    class="no-border"
+    (click)="onClickBtn(btnConfig.label)"
+    iconPos="right"
+    [styleClass]="btnConfig.styledClass"
+    [disabled]="!!btnConfig.disabled"
+  ></p-button>
+</ng-container>
+<!-- Boutons d'action secondaire -->
+<ng-container *ngIf="buttonType === 'bordered-button'">
+  <button
+    type="button"
+    [class]="btnConfig.styledClass"
+    data-te-ripple-init
+    [disabled]="btnConfig.disabled"
+    (click)="onClickBtn(btnConfig.styledClass)"
+  >
+    <i *ngIf="btnConfig.icon" [class]="btnConfig.icon"></i>
+    {{ btnConfig.label }}
+  </button>
+</ng-container>
+
+<!-- Boutons texte -->
+
+<div
+  class="flex flex-wrap gap-3 justify-content-center items-center"
+  *ngIf="buttonType === 'text-button'"
+>
+  <button
+    class="text-primary px-3 py-2 hover:bg-primary-50 hover:bg-opacity-10 hover:rounded"
+  >
+    Primary
+  </button>
+  <button
+    class="text-secondary px-3 py-2 hover:bg-secondary hover:bg-opacity-10 hover:rounded"
+  >
+    Secondary
+  </button>
+  <button
+    class="text-success px-3 py-2 hover:bg-success hover:bg-opacity-10 hover:rounded"
+  >
+    Success
+  </button>
+  <button
+    class="text-info px-3 py-2 hover:bg-info hover:bg-opacity-10 hover:rounded"
+  >
+    Info
+  </button>
+  <button
+    class="text-warn px-3 py-2 hover:bg-warn hover:bg-opacity-10 hover:rounded"
+  >
+    Warning
+  </button>
+  <button
+    class="text-error px-3 py-2 hover:bg-error hover:bg-opacity-10 hover:rounded"
+  >
+    Error
+  </button>
+  <button
+    class="text-neutral2 px-3 py-2 hover:bg-neutral2 hover:bg-opacity-10 hover:rounded"
+    disabled
+  >
+    Disabled
+  </button>
+  <button
+    class="text-neutral-800 px-3 py-2 hover:bg-neutral3 hover:bg-opacity-10 hover:rounded"
+  >
+    Cancel
+  </button>
+</div>
+<!-- Boutons raised texte -->
+
+<div
+  class="card flex flex-wrap gap-3 justify-content-center"
+  *ngIf="buttonType === 'raised text'"
+>
+  <div class="card flex flex-wrap gap-3 justify-content-center">
+    <p-button
+      label="Primary"
+      styleClass="p-button-text"
+      pRipple
+      class="primary-raised-btn focus:outline-none styled-box-green shadow-2"
+    ></p-button>
+    <p-button
+      label="Secondary"
+      styleClass="p-button-text"
+      class="secondary-raised-btn"
+    ></p-button>
+    <p-button
+      label="Success"
+      styleClass="p-button-text"
+      class="success-raised-btn"
+    ></p-button>
+    <p-button
+      label="Info"
+      styleClass="p-button-text"
+      class="info-raised-btn"
+    ></p-button>
+    <p-button
+      label="Warning"
+      styleClass="p-button-text"
+      class="warning-raised-btn"
+    ></p-button>
+    <p-button
+      label="Error"
+      styleClass="p-button-text"
+      class="error-raised-btn"
+    ></p-button>
+    <p-button
+      label="Disabled"
+      styleClass="p-button-text"
+      class="disabled-raised-btn"
+      [disabled]="true"
+    ></p-button>
+  </div>
+</div>
+<ng-container *ngIf="loading_button">
+  <p-button
+    label="Submit"
+    class="no-border"
+    [loading]="loading"
+    styleClass="mr-2 mt-2 bg-primary rounded border-transparent hover:bg-blue-500"
+    (click)="onLoadBtn()"
+  ></p-button>
+</ng-container>

@@ -1,0 +1,73 @@
+<div class="card">
+  <div class="flex items-center justify-center flex-wrap"><strong>input checkbox</strong></div>
+  <p-tabView>
+    <p-tabPanel header="Demo">
+      <div>
+        <div>
+          <label for="searchInput" class="mb-4"><strong>Basic</strong></label>
+        </div>
+        <div class="mt-4">
+          <cca-panel [header]="'Header'" [type]="'basic'" [content]="content" [toggleable]="false"></cca-panel>
+        </div>
+      </div>
+      <br>
+      <p-divider></p-divider>
+      <br>
+      <div>
+        <div>
+          <label for="searchInput" class="mb-4"><strong>Toggleable</strong></label>
+        </div>
+        <div class="mt-4">
+          <cca-panel [header]="'Header'" [type]="'basic'" [content]="content" [toggleable]="true"></cca-panel>
+        </div>
+      </div>
+      <br>
+      <p-divider></p-divider>
+      <br>
+      <div>
+        <div>
+          <label for="searchInput" class="mb-4"><strong>Template</strong></label>
+        </div>
+        <div class="mt-4">
+          <cca-panel [type]="'template'">
+            <ng-container header>
+              <span class="text-primary font-semibold text-xl">Header</span>
+            </ng-container>
+            Body Content
+            <ng-container footer>
+              Footer content here
+            </ng-container>
+          </cca-panel>
+        </div>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="HTML">
+      <pre>
+        <span class="text-info">&lt;cca-panel</span> [header]="'Header'" [type]="'basic'" [content]="content" [toggleable]="false"&gt;<span class="text-info">&lt;/cca-panel&gt;  </span>
+      </pre>
+      <br>
+      <pre>
+        <span class="text-info">&lt;cca-panel</span> [header]="'Header'" [type]="'basic'" [content]="content" [toggleable]="true"&gt;<span class="text-info">&lt;/cca-panel&gt; </span>
+      </pre>
+      <pre>
+        <span class="text-info">&lt;cca-panel</span> [type]="'template'"&gt;
+          &lt;ng-container header&gt;
+            &lt;span class="text-primary font-semibold text-xl"&gt;Header&lt;/span&gt;
+          &lt;/ng-container&gt;
+          Body Content
+          &lt;ng-container footer&gt;
+            Footer content here
+          &lt;/ng-container&gt;
+        <span class="text-info">&lt;/cca-panel&gt;  </span>
+      </pre>
+    </p-tabPanel>
+    <p-tabPanel header="Typescript">
+      <span class="text-success">content: string =</span> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+      do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+      nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum."
+    </p-tabPanel>
+  </p-tabView>
+</div>

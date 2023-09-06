@@ -1,0 +1,107 @@
+<div class="card">
+  <div class="flex items-center justify-center flex-wrap"><strong>input checkbox</strong></div>
+  <p-tabView>
+    <p-tabPanel header="Demo">
+      <div class="flex flex-wrap justify-center space-x-4">
+        <cca-checkbox [type]="'c-error'" [checked]="true" [label]="'error'"></cca-checkbox>
+        <cca-checkbox [type]="'c-basic'" [checked]="true" [label]="'basic'"></cca-checkbox>
+        <cca-checkbox [type]="'c-warn'" [checked]="true" [label]="'warn'"></cca-checkbox>
+        <cca-checkbox [type]="'c-primary'" [checked]="true" [label]="'primary'"></cca-checkbox>
+        <cca-checkbox [type]="'c-info'" [checked]="true" [label]="'info'"></cca-checkbox>
+        <cca-checkbox [type]="'c-success'" [checked]="true" [label]="'success'"></cca-checkbox>
+      </div><br>
+      <div class="flex flex-wrap justify-center space-x-4">
+        <label for="">Disabled</label>
+        <cca-checkbox [type]="'c-disabled'" [checked]="false" [label]="'disable'"></cca-checkbox>
+        <cca-checkbox [type]="'c-error'" [checked]="true" [label]="'error'" [disabled]="true"></cca-checkbox>
+        <cca-checkbox [type]="'c-basic'" [checked]="true" [label]="'basic'" [disabled]="true"></cca-checkbox>
+        <cca-checkbox [type]="'c-warn'" [checked]="true" [label]="'warn'" [disabled]="true"></cca-checkbox>
+        <cca-checkbox [type]="'c-primary'" [checked]="true" [label]="'primary'" [disabled]="true"></cca-checkbox>
+        <cca-checkbox [type]="'c-info'" [checked]="true" [label]="'info'" [disabled]="true"></cca-checkbox>
+        <cca-checkbox [type]="'c-success'" [checked]="true" [label]="'success'" [disabled]="true"></cca-checkbox>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="HTML">
+      <pre>
+        <span class="text-info">&lt;cca-checkbox</span> [type]="'c-error'" [checked]="true" [label]="'error'" <span class="text-info">&gt;&lt;/cca-checkbox&gt;</span>
+        <span class="text-info">&lt;cca-checkbox</span> [type]="'c-basic'" [checked]="true" [label]="'basic'" <span class="text-info">&gt;&lt;/cca-checkbox&gt;</span>
+        <span class="text-info">&lt;cca-checkbox</span> [type]="'c-warn'" [checked]="true" [label]="'warn'" <span class="text-info">&gt;&lt;/cca-checkbox&gt;</span>
+        <span class="text-info">&lt;cca-checkbox</span> [type]="'c-primary'" [checked]="true" [label]="'primary'" <span class="text-info">&gt;&lt;/cca-checkbox&gt;</span>
+        <span class="text-info">&lt;cca-checkbox</span> [type]="'c-info'" [checked]="true" [label]="'info'" <span class="text-info">&gt;&lt;/cca-checkbox&gt;</span>
+        <span class="text-info">&lt;cca-checkbox</span> [type]="'c-success'" [checked]="true" [label]="'success'" <span class="text-info">&gt;&lt;/cca-checkbox&gt;</span>
+        <span class="text-info">&lt;cca-checkbox</span> [type]="'c-disabled'" [checked]="false" [label]="'disable'" <span class="text-info">&gt;&lt;/cca-checkbox&gt;</span>
+      </pre>
+      <br>
+      <pre>
+        <span class="text-info">&lt;cca-checkbox</span> [type]="'c-disabled'" [checked]="false" [label]="'disable'" <span class="text-info">&gt;&lt;/cca-checkbox&gt;</span>
+        <span class="text-info">&lt;cca-checkbox</span> [type]="'c-error'" [checked]="true" [label]="'error'" [disabled]="true" <span class="text-info">&gt;&lt;/cca-checkbox&gt;</span>
+        <span class="text-info">&lt;cca-checkbox</span> [type]="'c-basic'" [checked]="true" [label]="'basic'" [disabled]="true" <span class="text-info">&gt;&lt;/cca-checkbox&gt;</span>
+        <span class="text-info">&lt;cca-checkbox</span> [type]="'c-warn'" [checked]="true" [label]="'warn'" [disabled]="true" <span class="text-info">&gt;&lt;/cca-checkbox&gt;</span>
+        <span class="text-info">&lt;cca-checkbox</span> [type]="'c-primary'" [checked]="true" [label]="'primary'" [disabled]="true" <span class="text-info">&gt;&lt;/cca-checkbox&gt;</span>
+        <span class="text-info">&lt;cca-checkbox</span> [type]="'c-info'" [checked]="true" [label]="'info'" [disabled]="true" <span class="text-info">&gt;&lt;/cca-checkbox&gt;</span>
+        <span class="text-info">&lt;cca-checkbox</span> [type]="'c-success'" [checked]="true" [label]="'success'" [disabled]="true" <span class="text-info">&gt;&lt;/cca-checkbox&gt;</span>
+      </pre>
+    </p-tabPanel>
+  </p-tabView>
+</div>
+
+<br />
+<p-divider></p-divider>
+<br />
+
+<div class="card">
+  <div class="flex items-center justify-center flex-wrap"><strong>input radio</strong></div>
+  <p-tabView>
+    <p-tabPanel header="Demo">
+      <div class="flex flex-wrap gap-3 justify-center">
+        <div class="flex align-items-center">
+          <p-radioButton value="Primary" class="primaryRadio" [(ngModel)]="ingredient"
+            inputId="primary"></p-radioButton>
+          <label for="primary" class="ml-2">Primary</label>
+        </div>
+
+        <div class="flex align-items-center">
+          <p-radioButton class="secondaryRadio" value="Secondary" [(ngModel)]="ingredient"
+            inputId="secondary"></p-radioButton>
+          <label for="secondary" class="ml-2">Secondary</label>
+        </div>
+
+        <div class="flex align-items-center">
+          <p-radioButton class="successRadio" value="Success" [(ngModel)]="ingredient"
+            inputId="success"></p-radioButton>
+          <label for="success" class="ml-2">Success</label>
+        </div>
+
+        <div class="flex align-items-center">
+          <p-radioButton class="warningRadio" value="Warning" [(ngModel)]="ingredient"
+            inputId="warning"></p-radioButton>
+          <label for="warning" class="ml-2">Warning</label>
+        </div>
+        <div class="flex align-items-center">
+          <p-radioButton class="errorRadio" value="Error" [(ngModel)]="ingredient" inputId="error"></p-radioButton>
+          <label for="error" class="ml-2">Error</label>
+        </div>
+        <div class="flex align-items-center">
+          <p-radioButton value="Disabled" [disabled]="true" [(ngModel)]="ingredient" inputId="disabled"></p-radioButton>
+          <label for="disabled" class="ml-2">Disabled</label>
+        </div>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="HTML">
+      <pre>
+<span class="text-info">&lt;p-radioButton</span> value="Primary" class="primaryRadio" [(ngModel)]="ingredient" inputId="primary" <span class="text-info">&gt;&lt;/p-radioButton&gt;</span>
+<br>
+<span class="text-info">&lt;p-radioButton</span> class="secondaryRadio" value="Secondary" [(ngModel)]="ingredient" inputId="secondary" <span class="text-info">&gt;&lt;/p-radioButton&gt;</span>
+<br>
+<span class="text-info">&lt;p-radioButton</span> class="successRadio" value="Success" [(ngModel)]="ingredient" inputId="success" <span class="text-info">&gt;&lt;/p-radioButton&gt;</span>
+<br>
+<span class="text-info">&lt;p-radioButton</span> class="warningRadio" value="Warning" [(ngModel)]="ingredient" inputId="warning" <span class="text-info">&gt;&lt;/p-radioButton&gt;</span>
+<br>
+<span class="text-info">&lt;p-radioButton</span> class="errorRadio" value="Error" [(ngModel)]="ingredient" inputId="error" <span class="text-info">&gt;&lt;/p-radioButton&gt;</span>
+<br>
+<span class="text-info">&lt;p-radioButton</span> value="Disabled" [disabled]="true" [(ngModel)]="ingredient" inputId="disabled" <span class="text-info">&gt;&lt;/p-radioButton&gt;</span>
+<br>
+      </pre>
+    </p-tabPanel>
+  </p-tabView>
+</div>

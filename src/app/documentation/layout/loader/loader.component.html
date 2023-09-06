@@ -1,0 +1,113 @@
+<div class="card">
+  <div class="flex items-center justify-center flex-wrap">
+    <strong>Loader principale</strong>
+  </div>
+  <p-tabView>
+    <p-tabPanel header="Demo">
+      <cca-buttons
+        [btnConfig]="{
+        type: 'Primary',
+        label: 'Show loader',
+        styledClass:
+        'rounded border-1 border-primary mr-2 mt-2 px-3 py-2 font-medium text-primary hover:border-primary-600 hover:bg-primary-100 hover:bg-opacity-10 hover:text-primary-600',
+      }"
+        [buttonType]="'bordered-button'"
+        (actionBtn)="showLoader()"
+      ></cca-buttons>
+    </p-tabPanel>
+    <p-tabPanel header="HTML">
+      <span class="text-info">&lt;cca-buttons</span> [btnConfig]="&lbrace; type:
+      'Primary', label: 'Show loader', styledClass: 'rounded border-1
+      border-primary mr-2 mt-2 px-3 py-2 font-medium text-primary
+      hover:border-primary-600 hover:bg-primary-100 hover:bg-opacity-10
+      hover:text-primary-600', &rbrace;" [buttonType]="'bordered-button'"
+      (actionBtn)="showLoader()"<span class="text-info"
+        >&gt;&lt;/cca-buttons&gt;</span
+      >
+    </p-tabPanel>
+    <p-tabPanel header="Typescript">
+      <pre>
+        import &#123; Component, OnInit &#125; from '@angular/core';
+        import &#123; BehaviorSubjectsService &#125; from 'src/app/core/services/behavior-subjects.service';
+      
+        @Component(&#123;
+          selector: 'cca-loader',
+          templateUrl: './loader.component.html',
+          styleUrls: ['./loader.component.scss'],
+        &#125;)
+        export class LoaderComponent implements OnInit &#123;
+          constructor(private behaviorSubject: BehaviorSubjectsService) &#123; &#125;
+      
+          ngOnInit() &#123; &#125;
+          showLoader() &#123;
+            this.behaviorSubject.setRefreshLoader(true);
+          &#125;
+        &#125;
+      </pre>
+    </p-tabPanel>
+    <p-tabPanel header="Service">
+      <pre>
+        import &#123; Injectable &#125; from '@angular/core';
+        import &#123; BehaviorSubject, Observable &#125; from 'rxjs';
+      
+        @Injectable(&#123;
+          providedIn: 'root',
+        &#125;)
+        export class BehaviorSubjectsService &#123;
+          constructor() &#123; &#125;
+          refreshLoader = new BehaviorSubject&lt;boolean&gt;(false);
+          closeModalEvent = new BehaviorSubject&lt;string&gt;('');
+      
+          // Refresh loader
+          setRefreshLoader(value: boolean) &#123;
+            this.refreshLoader.next(value);
+          &#125;
+          getRefreshLoader(): Observable&lt;boolean&gt; &#123;
+            return this.refreshLoader.asObservable();
+          &#125;
+          // Close modal
+          setCloseModalEvent(value: string) &#123;
+            this.closeModalEvent.next(value);
+          &#125;
+          getCloseModalEvent(): Observable&lt;string&gt; &#123;
+            return this.closeModalEvent.asObservable();
+          &#125;
+          &#125;
+      </pre>
+    </p-tabPanel>
+  </p-tabView>
+</div>
+<br />
+<p-divider></p-divider>
+<br />
+<div class="card">
+  <div class="flex items-center justify-center flex-wrap">
+    <strong>Loader secondaire</strong>
+  </div>
+  <p-tabView>
+    <p-tabPanel header="Demo">
+      <div class="flex items-center justify-content-around flex-wrap m-1">
+        <p-progressSpinner
+          class="spinner"
+          animationDuration=".6s"
+        ></p-progressSpinner>
+        <p-progressSpinner
+          styleClass="w-4rem h-4rem"
+          strokeWidth="8"
+          fill="var(--surface-ground)"
+          animationDuration=".5s"
+        ></p-progressSpinner>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="HTML">
+      <span class="text-info">&lt;p-progressSpinner</span> class="spinner"
+      animationDuration=".6s"
+      <span class="text-info">&gt;&lt;/p-progressSpinner&gt;</span> <br /><br />
+      <span class="text-info">&lt;p-progressSpinner</span> styleClass="w-4rem
+      h-4rem" strokeWidth="8" fill="var(--surface-ground)"
+      animationDuration=".5s"<span class="text-info"
+        >&gt;&lt;/p-progressSpinner&gt;</span
+      >
+    </p-tabPanel>
+  </p-tabView>
+</div>

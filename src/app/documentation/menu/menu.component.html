@@ -1,0 +1,76 @@
+<div>
+  <div>
+    <label for="searchInput" class="mb-4"><strong>Menu avec icon popup true</strong></label>
+  </div>
+  <div class="mt-4">
+    <cca-menu [items]="items" [type]="'menu'" [popup]="true" (menuAction)="action($event)"></cca-menu>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div>
+  <div>
+    <label for="searchInput" class="mb-4"><strong>Menu avec popup false</strong></label>
+  </div>
+  <div class="mt-4">
+    <cca-menu [items]="items" [type]="'menu'"></cca-menu>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div>
+  <div>
+    <label for="searchInput" class="mb-4"><strong>Menu bar</strong></label>
+  </div>
+  <div class="mt-4">
+    <cca-menu [items]="data" [type]="'menu-bar'"></cca-menu>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div>
+  <div>
+    <label for="searchInput" class="mb-4"><strong>Mega menu</strong></label>
+  </div>
+  <div class="mt-4">
+    <cca-menu [megaMenuitems]="megaMenu" [type]="'mega-menu'"></cca-menu>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div>
+  <div>
+    <label for="searchInput" class="mb-4"><strong>Panel menu basic</strong></label>
+  </div>
+  <div class="mt-4">
+    <cca-menu [items]="data" [type]="'panel-menu'" [menuWidth]="'25vw'"></cca-menu>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div>
+  <div>
+    <label for="searchInput" class="mb-4"><strong>Panel menu multiple</strong></label>
+  </div>
+  <div class="mt-4">
+    <cca-menu [items]="data" [type]="'panel-menu'" [multiple]="true" [menuWidth]="'25vw'"></cca-menu>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>
+<br>
+<div>
+  <div>
+    <label for="searchInput" class="mb-4"><strong>Tab menu</strong></label>
+  </div>
+  <div class="mt-4">
+    <cca-menu [items]="tabMenu" [type]="'tab-menu'"></cca-menu>
+  </div>
+</div>
+<br>
+<p-divider></p-divider>

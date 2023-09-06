@@ -1,0 +1,86 @@
+<div class="card">
+  <div class="flex items-center justify-center flex-wrap"><strong>Tag</strong></div>
+  <p-tabView>
+    <p-tabPanel header="Demo">
+      <div class="card flex justify-content-center">
+        <label for="" class="px-4">Basic</label>
+        <cca-tag [type]="'basic'" [value]="'basic'"></cca-tag>
+      </div>
+      <p-divider></p-divider>
+      <div class="card flex justify-content-center gap-2">
+        <label for="" class="px-4">Severity</label>
+        <cca-tag [type]="'primary'" [value]="'primary'"></cca-tag>
+        <cca-tag [type]="'success'" [value]="'success'"></cca-tag>
+        <cca-tag [type]="'info'" [value]="'info'"></cca-tag>
+        <cca-tag [type]="'warn'" [value]="'warn'"></cca-tag>
+        <cca-tag [type]="'error'" [value]="'error'"></cca-tag>
+      </div>
+      <p-divider></p-divider>
+      <div class="card flex justify-content-center gap-2">
+        <label for="" class="px-4">Pill</label>
+        <cca-tag [type]="'primary-rounded'" [value]="'primary'"></cca-tag>
+        <cca-tag [type]="'success-rounded'" [value]="'success'"></cca-tag>
+        <cca-tag [type]="'info-rounded'" [value]="'info'"></cca-tag>
+        <cca-tag [type]="'warn-rounded'" [value]="'warn'"></cca-tag>
+        <cca-tag [type]="'error-rounded'" [value]="'error'"></cca-tag>
+      </div>
+      <p-divider></p-divider>
+      <div class="card flex justify-content-center gap-2">
+        <label for="" class="px-4">Icon</label>
+        <cca-tag [type]="'primary-icon'" [icon]="'pi pi-user'" [value]="'primary'"></cca-tag>
+        <cca-tag [type]="'success-icon'" [icon]="'pi pi-check'" [value]="'success'"></cca-tag>
+        <cca-tag [type]="'info-icon'" [icon]="'pi pi-info-circle'" [value]="'info'"></cca-tag>
+        <cca-tag [type]="'warn-icon'" [icon]="'pi pi-exclamation-triangle'" [value]="'warn'"></cca-tag>
+        <cca-tag [type]="'error-icon'" [icon]="'pi pi-times'" [value]="'error'"></cca-tag>
+      </div>
+      <p-divider></p-divider>
+      <div class="card flex justify-content-center gap-2">
+        <label for="" class="px-4">Removed tag</label>
+        <cca-tag [type]="'primary-removed'" [icon]="'pi pi-times'" [value]="'primary'"></cca-tag>
+        <cca-tag [type]="'success-removed'" [icon]="'pi pi-times'" [value]="'success'"></cca-tag>
+        <cca-tag [type]="'info-removed'" [icon]="'pi pi-times'" [value]="'info'"></cca-tag>
+        <cca-tag [type]="'warn-removed'" [icon]="'pi pi-times'" [value]="'warn'"></cca-tag>
+        <cca-tag [type]="'error-removed'" [icon]="'pi pi-times'" [value]="'error'"></cca-tag>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="HTML">
+      <pre>
+        <span class="text-info">&lt;cca-tag</span> [type]="'basic'" [value]="'basic'">&lt;/cca-tag>
+      </pre>
+      <br>
+      <pre>
+        <span class="text-info">&lt;cca-tag</span> [type]="'primary-icon'" [icon]="'pi pi-user'" [value]="'primary'">&lt;/cca-tag>
+        <span class="text-info">&lt;cca-tag</span> [type]="'success-icon'" [icon]="'pi pi-check'" [value]="'success'">&lt;/cca-tag>
+        <span class="text-info">&lt;cca-tag</span> [type]="'info-icon'" [icon]="'pi pi-info-circle'" [value]="'info'">&lt;/cca-tag>
+        <span class="text-info">&lt;cca-tag</span> [type]="'warn-icon'" [icon]="'pi pi-exclamation-triangle'" [value]="'warn'">&lt;/cca-tag>
+        <span class="text-info">&lt;cca-tag</span> [type]="'error-icon'" [icon]="'pi pi-times'" [value]="'error'">&lt;/cca-tag>
+      </pre>
+      <br>
+      <pre>
+        <span class="text-info">&lt;cca-tag</span> [type]="'primary-rounded'" [value]="'primary'">&lt;/cca-tag>
+        <span class="text-info">&lt;cca-tag</span> [type]="'success-rounded'" [value]="'success'">&lt;/cca-tag>
+        <span class="text-info">&lt;cca-tag</span> [type]="'info-rounded'" [value]="'info'">&lt;/cca-tag>
+        <span class="text-info">&lt;cca-tag</span> [type]="'warn-rounded'" [value]="'warn'">&lt;/cca-tag>
+        <span class="text-info">&lt;cca-tag</span> [type]="'error-rounded'" [value]="'error'">&lt;/cca-tag>
+      </pre>
+      <br>
+      <pre>
+        <span class="text-info">&lt;cca-tag</span> [type]="'primary-icon'" [icon]="'pi pi-user'" [value]="'primary'">&lt;/cca-tag>
+        <span class="text-info">&lt;cca-tag</span> [type]="'success-icon'" [icon]="'pi pi-check'" [value]="'success'">&lt;/cca-tag>
+        <span class="text-info">&lt;cca-tag</span> [type]="'info-icon'" [icon]="'pi pi-info-circle'" [value]="'info'">&lt;/cca-tag>
+        <span class="text-info">&lt;cca-tag</span> [type]="'warn-icon'" [icon]="'pi pi-exclamation-triangle'" [value]="'warn'">&lt;/cca-tag>
+        <span class="text-info">&lt;cca-tag</span> [type]="'error-icon'" [icon]="'pi pi-times'" [value]="'error'">&lt;/cca-tag>
+      </pre>
+      <br>
+      <pre>
+        <span class="text-info">&lt;cca-tag</span> [type]="'primary-removed'" [icon]="'pi pi-times'" [value]="'primary'">&lt;/cca-tag>
+        <span class="text-info">&lt;cca-tag</span> [type]="'success-removed'" [icon]="'pi pi-times'" [value]="'success'">&lt;/cca-tag>
+        <span class="text-info">&lt;cca-tag</span> [type]="'info-removed'" [icon]="'pi pi-times'" [value]="'info'">&lt;/cca-tag>
+        <span class="text-info">&lt;cca-tag</span> [type]="'warn-removed'" [icon]="'pi pi-times'" [value]="'warn'">&lt;/cca-tag>
+        <span class="text-info">&lt;cca-tag</span> [type]="'error-removed'" [icon]="'pi pi-times'" [value]="'error'">&lt;/cca-tag>
+      </pre>
+    </p-tabPanel>
+  </p-tabView>
+</div>
+
+<p-divider></p-divider>

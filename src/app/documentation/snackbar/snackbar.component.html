@@ -1,0 +1,128 @@
+<cca-toast [position]="'top-left'" [key]="'tl'"></cca-toast>
+<cca-toast [position]="'top-right'" [key]="'tr'"></cca-toast>
+<cca-toast [position]="'bottom-left'" [key]="'bl'"></cca-toast>
+<cca-toast [position]="'bottom-right'" [key]="'br'"></cca-toast>
+<cca-toast [position]="'top-center'" [key]="'tc'"></cca-toast>
+<cca-toast [position]="'bottom-center'" [key]="'bc'"></cca-toast>
+
+<div class="card">
+  <div class="flex justify-content-center flex-wrap gap-3 mb-4">
+    <cca-buttons
+      [btnConfig]="{
+      type: 'Info',
+      label: 'InfoMessage',
+      styledClass:
+      'rounded border-1 border-info mr-2 px-3 py-2 mt-2 font-medium text-info hover:border-info-600 hover:bg-info hover:bg-opacity-10 hover:text-info-600',
+    }"
+      [buttonType]="'bordered-button'"
+      (click)="
+        this.showToast(
+          'tl',
+          'info',
+          'Info',
+          'Message Content',
+          'toast-info-cca'
+        )
+      "
+    ></cca-buttons>
+
+    <cca-buttons
+      [btnConfig]="{
+      type: 'Success',
+      label: 'Success',
+      styledClass:
+      'rounded border-1 border-success mr-2 px-3 py-2 mt-2 font-medium text-success hover:border-success-600 hover:bg-success hover:bg-opacity-10 hover:text-success-600',
+    }"
+      [buttonType]="'bordered-button'"
+      (click)="
+        this.showToast(
+          'tr',
+          'success',
+          'Success',
+          'Message Content',
+          'toast-success-cca'
+        )
+      "
+    ></cca-buttons>
+
+    <cca-buttons
+      [btnConfig]="{
+      type: 'Error',
+      label: 'Error',
+      styledClass:
+      'rounded border-1 border-error mr-2 px-3 py-2 mt-2 font-medium text-error hover:border-error-600 hover:bg-error hover:bg-opacity-10 hover:text-error-600',
+    }"
+      [buttonType]="'bordered-button'"
+      (click)="
+        this.showToast(
+          'br',
+          'error',
+          'Error',
+          'Message Content',
+          'toast-error-cca'
+        )
+      "
+    ></cca-buttons>
+
+    <cca-buttons
+      [btnConfig]="{
+      type: 'Warning',
+      label: 'Warning',
+      styledClass:
+      'rounded border-1 border-warn mr-2 px-3 py-2 mt-2 font-medium text-warn hover:border-warn-600 hover:bg-warn hover:bg-opacity-10 hover:text-warn-600',
+    }"
+      [buttonType]="'bordered-button'"
+      (click)="
+        this.showToast(
+          'bl',
+          'warn',
+          'Warn',
+          'Message Content',
+          'toast-warn-cca'
+        )
+      "
+    ></cca-buttons>
+  </div>
+</div>
+
+<div class="card">
+  <div class="flex justify-content-center flex-wrap gap-3 mb-4">
+    <cca-buttons
+      [btnConfig]="{
+  type: 'Warning',
+  label: 'Top center',
+  styledClass:
+  'rounded border-1 border-warn mr-2 px-3 py-2 mt-2 font-medium text-warn hover:border-warn-600 hover:bg-warn hover:bg-opacity-10 hover:text-warn-600',
+}"
+      [buttonType]="'bordered-button'"
+      (click)="
+        this.showToast(
+          'tc',
+          'warn',
+          'Warn',
+          'Message Content',
+          'toast-warn-cca'
+        )
+      "
+    ></cca-buttons>
+
+    <cca-buttons
+      [btnConfig]="{
+  type: 'Info',
+  label: 'Bottom center',
+  styledClass:
+  'rounded border-1 border-info mr-2 px-3 py-2 mt-2 font-medium text-info hover:border-info-600 hover:bg-info hover:bg-opacity-10 hover:text-info-600',
+}"
+      [buttonType]="'bordered-button'"
+      (click)="
+        this.showToast(
+          'bc',
+          'info',
+          'Info',
+          'Message Content',
+          'toast-info-cca'
+        )
+      "
+    ></cca-buttons>
+  </div>
+</div>

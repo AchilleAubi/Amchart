@@ -1,0 +1,33 @@
+<div class="card flex justify-content-center w-[25px]">
+  <div class="card flex justify-content-center gap-2">
+    <p-confirmDialog [style]="{ width: '20vw' }" [closable]="false">
+      <ng-template pTemplate="footer">
+        <div
+          class="flex justify-center items-center"
+          [ngClass]="btnTitle === 'Save' ? 'flex-row-reverse' : ''"
+        >
+          <cca-buttons
+            [btnConfig]="{
+              type: 'Error',
+              label: btnTitle,
+              styledClass: confirmBtnClass,
+            }"
+            [buttonType]="'full'"
+            (click)="closePopup()"
+          ></cca-buttons>
+          <cca-buttons
+            *ngIf="showCancelBtn"
+            [btnConfig]="{
+          type: 'Cancel',
+          label: 'Cancel',
+          styledClass:
+          'rounded border-1 border-neutral2-100 mr-2 px-3 my-2 py-2 font-medium text-neutral-800 hover:border-neutral-500 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-800',
+        }"
+            [buttonType]="'bordered-button'"
+            (click)="closePopup()"
+          ></cca-buttons>
+        </div>
+      </ng-template>
+    </p-confirmDialog>
+  </div>
+</div>

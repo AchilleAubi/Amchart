@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+/* @layer components {
+  .bg-primary-100 {
+    background-color: #0075ea;
+    opacity: 2;
+  }
+} */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.p-toast .p-toast-message .p-toast-message-content {
+  border-width: 0 0 0 0px !important;
+}
+
+.toast-info-cca svg {
+  @apply text-info;
+}
+
+.toast-info-cca {
+  @apply text-info bg-info-100 border-info;
+}
+
+.toast-warn-cca svg {
+  @apply text-warn;
+}
+
+.toast-warn-cca {
+  @apply text-warn bg-warn-100 border-warn;
+}
+
+.toast-error-cca svg {
+  @apply text-error;
+}
+
+.toast-error-cca {
+  @apply text-error border-error;
+}
+
+.toast-success-cca svg {
+  @apply text-success;
+}
+
+.toast-success-cca {
+  @apply text-success bg-success-100 border-success;
+}

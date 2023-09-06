@@ -1,0 +1,108 @@
+<div class="flex justify-center items-center flex-wrap">
+  <cca-buttons
+    [btnConfig]="{
+      type: 'Primary',
+      label: 'Full width modal',
+      styledClass:
+        'mr-2 mt-2 bg-primary rounded border-transparent hover:bg-blue-500',
+    }"
+    [buttonType]="'full'"
+    (actionBtn)="showDialoog($event)"
+  ></cca-buttons>
+  <cca-buttons
+    [btnConfig]="{
+      type: 'Secondary',
+      label: 'Large modal',
+      styledClass:
+        'bg-secondary border-transparent hover:bg-primary-900 mr-2 mt-2 focus:bg-primary-900',
+    }"
+    [buttonType]="'full'"
+    (actionBtn)="showDialoog($event)"
+  ></cca-buttons>
+  <cca-buttons
+    [btnConfig]="{
+      type: 'Success',
+      label: 'Standard modal',
+      styledClass:
+        'bg-success border-transparent hover:bg-green-700 mr-2 mt-2',
+    }"
+    [buttonType]="'full'"
+    (actionBtn)="showDialoog($event)"
+  ></cca-buttons>
+  <cca-buttons
+    [btnConfig]="{
+      type: 'Info',
+      label: 'Small modal',
+      styledClass: 'bg-info border-transparent hover:bg-cyan-400 mr-2 mt-2',
+    }"
+    [buttonType]="'full'"
+    (actionBtn)="showDialoog($event)"
+  ></cca-buttons>
+</div>
+
+<p-dialog
+  header="Header"
+  [(visible)]="viewModal"
+  [breakpoints]="{ '465px': '98vw' }"
+  [style]="classModal"
+>
+  <ng-template pTemplate="header">
+    <span class="text-xl font-bold">Header Content {{ modalType }}</span>
+  </ng-template>
+  <p-divider></p-divider>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+  <ng-template pTemplate="footer">
+    <p-divider></p-divider>
+    <div class="flex items-center justify-content-end flex-wrap">
+      <cca-buttons
+        [btnConfig]="{
+        type: 'Cancel',
+        label: 'Cancel', 
+        styledClass:
+        'rounded border-1 border-neutral-800 mr-2 px-3 mt-2 py-2 font-medium text-neutral-800 hover:border-neutral-800 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-800',
+      }"
+        [buttonType]="'bordered-button'"
+        (actionBtn)="viewModal = false"
+      ></cca-buttons>
+      <cca-buttons
+        [btnConfig]="{
+      type: 'Secondary',
+      label: 'Save changes',
+      styledClass: 'bg-secondary border-transparent hover:bg-primary-900 mr-2 mt-2 py-[0.45rem] focus:bg-primary-900',
+    }"
+        [buttonType]="'full'"
+        (actionBtn)="viewModal = false"
+      ></cca-buttons>
+    </div>
+  </ng-template>
+</p-dialog>
+<!-- text modale -->
+<p-dialog header="Header" [(visible)]="viewModalText" [style]="classModal">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+</p-dialog>

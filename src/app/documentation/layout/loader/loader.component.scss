@@ -1,0 +1,40 @@
+flat-button-primary {
+  margin: 8px 8px 8px 0;
+}
+
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+::ng-deep {
+  .spinner {
+    .p-progress-spinner-svg {
+      animation: none !important;
+      height: 100%;
+      transform-origin: center center;
+      width: 100%;
+      position: absolute;
+      inset: 0;
+      margin: auto;
+    }
+    .p-progress-spinner-circle {
+      stroke-dasharray: 89, 200;
+      stroke-dashoffset: 0;
+      stroke: #d62d20;
+      animation: p-progress-spinner-dash 1.5s ease-in-out infinite,
+        p-progress-spinner-color 6s ease-in-out infinite;
+      stroke-linecap: round;
+    }
+    @keyframes p-progress-spinner-color {
+      100%,
+      0%,
+      40%,
+      66%,
+      90%,
+      80% {
+        stroke: #d62d20 !important;
+      }
+    }
+  }
+}

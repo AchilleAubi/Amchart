@@ -1,0 +1,18 @@
+<div>
+  <span>Icons</span>
+  <cca-icon></cca-icon>
+</div>
+<p-divider></p-divider>
+<div class="flex items-center">
+  <p>Lien pour les autres icons :</p>
+  <cca-buttons
+    [btnConfig]="{
+  type: 'Primary',
+  label: 'Show Icons',
+  styledClass:
+  'rounded border-1 border-primary mx-2 px-3 py-2 font-medium text-primary hover:border-primary-600 hover:bg-primary-100 hover:bg-opacity-10 hover:text-primary-600',
+}"
+    [buttonType]="'bordered-button'"
+    (actionBtn)="ouvrirURL()"
+  ></cca-buttons>
+</div>
